@@ -1,0 +1,151 @@
+app	tool	model	state	run_status	code_coverage_percent	activity_coverage_percent	actions	duration_seconds	llm_calls	llm_input_tokens	llm_output_tokens	covered_probes	total_probes	app_crashed	app_anr	package	llm_model_recorded
+A Photo Manager	gptdroid	gpt-4o-mini	weak	completed_no_actions		11.11	0	3604.2	1	125	50					de.k3b.android.androFotoFinder	gpt-4o-mini
+Amaze	gptdroid	gpt-4o-mini	finished	succeeded	25.64	16.67	703	3605.5	704	796279	14816					com.amaze.filemanager	gpt-4o-mini
+And Bible	gptdroid	gpt-4o-mini	finished	succeeded	20.89	6.45	29	3603.1	30	28200	700					net.bible.android.activity	gpt-4o-mini
+AnkiDroid	gptdroid	gpt-4o-mini	finished	succeeded	18.7	14.29	7	3602.1	8	5905	210					com.ichi2.anki	gpt-4o-mini
+AntennaPod Debug	gptdroid	gpt-4o-mini	finished	succeeded	23.63	25.0	671	3601.8	672	2023482	15611					de.danoeh.antennapod.debug	gpt-4o-mini
+Binary Eye	gptdroid	gpt-4o-mini	finished	succeeded	32.57	75.0	4	3601.3	5	2643	118					de.markusfisch.android.binaryeye.debug	gpt-4o-mini
+Breezy Weather	gptdroid	gpt-4o-mini	finished	succeeded	27.05	7.14	705	3603.6	706	703693	16990					org.breezyweather.debug	gpt-4o-mini
+Chess	gptdroid	gpt-4o-mini	finished	succeeded	30.19	12.5	688	3603.4	689	949984	17349					jwtc.android.chess	gpt-4o-mini
+Commons	gptdroid	gpt-4o-mini	finished	succeeded	37.59	14.29	659	3605.7	660	755990	14728					fr.free.nrw.commons.debug	gpt-4o-mini
+Eventyay Attendee	gptdroid	gpt-4o-mini	finished	succeeded	37.81	8.33	711	3601.3	712	638567	15688					com.eventyay.attendee	gpt-4o-mini
+Fedilab	gptdroid	gpt-4o-mini	finished	succeeded	9.82	2.82	679	3604.0	680	833158	14987					app.fedilab.android.debug	gpt-4o-mini
+FeederD	gptdroid	gpt-4o-mini	finished	succeeded	46.77	10.0	685	3605.5	686	832865	16145					com.nononsenseapps.feeder.debug	gpt-4o-mini
+Firefox Lite Dev	gptdroid	gpt-4o-mini	finished	succeeded	46.44	9.68	482	3604.0	483	2521276	20844					org.mozilla.rocket.debug.ting	gpt-4o-mini
+Frost Debug	gptdroid	gpt-4o-mini	finished	succeeded	33.96	12.5	699	3604.2	700	855325	16150					com.pitchedapps.frost.debug	gpt-4o-mini
+Geohash Droid	gptdroid	gpt-4o-mini	finished	succeeded	14.62	14.29	4	3602.6	5	3195	143					net.exclaimindustries.geohashdroid	gpt-4o-mini
+GPSLogger	gptdroid	gpt-4o-mini	finished	succeeded	22.93	9.09	703	3602.7	704	943659	17615					com.mendhak.gpslogger	gpt-4o-mini
+Infinity For Reddit	gptdroid	gpt-4o-mini	finished	succeeded	18.32	4.92	652	3603.9	653	3641885	16357					ml.docilealligator.infinityforreddit.debug	gpt-4o-mini
+Jellyfin Android	gptdroid	gpt-4o-mini	finished	succeeded	39.07	20.0	643	3605.7	644	557950	13687					org.jellyfin.mobile.debug	gpt-4o-mini
+Kiwix	gptdroid	gpt-4o-mini	finished	succeeded	37.07	33.33	19	3601.0	20	18861	541					org.kiwix.kiwixmobile	gpt-4o-mini
+Kore	gptdroid	gpt-4o-mini	finished	succeeded	19.01	11.76	698	3601.0	699	569489	16329					org.xbmc.kore	gpt-4o-mini
+LibreTorrent	gptdroid	gpt-4o-mini	finished	succeeded	28.96	11.11	668	3605.9	669	923999	15711					org.proninyaroslav.libretorrent.debug	gpt-4o-mini
+MaterialFBook	gptdroid	gpt-4o-mini	finished	succeeded	38.67	25.0	611	3604.6	612	914326	15144					me.zeeroooo.materialfb	gpt-4o-mini
+Money Manager Ex	gptdroid	gpt-4o-mini	finished	succeeded	26.38	12.2	227	3603.3	228	262005	5398					com.money.manager.ex	gpt-4o-mini
+Muzei	gptdroid	gpt-4o-mini	finished	succeeded	45.84	7.14	417	3605.4	418	334613	9641					net.nurik.roman.muzei	gpt-4o-mini
+My Expenses Debug	gptdroid	gpt-4o-mini	finished	succeeded	34.72	7.02	685	3605.1	686	978297	19210					org.totschnig.myexpenses.debug	gpt-4o-mini
+NewPipe Debug	gptdroid	gpt-4o-mini	finished	succeeded	26.92	25.0	699	3602.8	700	816780	15764					org.schabi.newpipe.debug	gpt-4o-mini
+Nextcloud	gptdroid	gpt-4o-mini	finished	succeeded	48.77	5.71	1	3601.2	2	851	75					com.nextcloud.client	gpt-4o-mini
+ODK Collect	gptdroid	gpt-4o-mini	finished	succeeded	23.29	8.33	4	3601.6	5	3733	142					org.odk.collect.android	gpt-4o-mini
+Omni Notes Alpha	gptdroid	gpt-4o-mini	finished	succeeded	29.09	7.69	688	3605.3	689	804397	17101					it.feio.android.omninotes.alpha	gpt-4o-mini
+Open Food Facts	gptdroid	gpt-4o-mini	finished	succeeded	23.94	16.67	688	3604.9	689	725047	15886					org.openpetfoodfacts.scanner.debug	gpt-4o-mini
+OpenLauncher	gptdroid	gpt-4o-mini	finished	succeeded	31.16	25.0	727	3600.5	728	533694	16284					com.benny.openlauncher	gpt-4o-mini
+Orgzly Revived	gptdroid	gpt-4o-mini	finished	succeeded	25.59	10.0	4	3602.6	5	3377	140					com.orgzlyrevived	gpt-4o-mini
+ownCloud	gptdroid	gpt-4o-mini	finished	succeeded	26.25	19.23	658	3602.3	659	1046213	18037					com.owncloud.android.debug	gpt-4o-mini
+OwnTracks	gptdroid	gpt-4o-mini	finished	succeeded	34.47	16.67	703	3602.7	704	560682	16060					org.owntracks.android.debug	gpt-4o-mini
+Phonograph DEBUG	gptdroid	gpt-4o-mini	finished	succeeded	32.59	20.0	577	3600.6	578	617804	19409					com.kabouzeid.gramophone.debug	gpt-4o-mini
+RedReader	gptdroid	gpt-4o-mini	finished	succeeded	33.41	13.04	678	3603.8	679	1519866	16399					org.quantumbadger.redreader	gpt-4o-mini
+Scarlet Notes FD	gptdroid	gpt-4o-mini	finished	succeeded	32.99	6.67	697	3603.3	698	569738	16089					com.bijoysingh.quicknote	gpt-4o-mini
+Simple Alarm Clock	gptdroid	gpt-4o-mini	finished	succeeded	52.46	20.0	658	3603.0	659	3106295	15510					com.better.alarm.debug	gpt-4o-mini
+SkyTube	gptdroid	gpt-4o-mini	finished	succeeded	25.24	15.38	690	3605.0	691	763278	15910					free.rm.skytube.extra	gpt-4o-mini
+StreetComplete	gptdroid	gpt-4o-mini	finished	succeeded	33.15	14.29	683	3606.0	684	802452	16344					de.westnordost.streetcomplete.debug	gpt-4o-mini
+Sunflower	gptdroid	gpt-4o-mini	finished	succeeded	59.55	100.0	679	3601.9	680	708808	16301					com.google.samples.apps.sunflower	gpt-4o-mini
+Trackbook	gptdroid	gpt-4o-mini	finished	succeeded	31.82	100.0	16	3602.3	17	17857	618					org.y20k.trackbook	gpt-4o-mini
+Transistor	gptdroid	gpt-4o-mini	finished	succeeded	24.1	50.0	697	3600.9	698	539478	16050					org.y20k.transistor	gpt-4o-mini
+Twire	gptdroid	gpt-4o-mini	finished	succeeded	31.95	15.0	430	3604.5	431	456023	9511					com.perflyst.twire.debug	gpt-4o-mini
+Ultrasonic	gptdroid	gpt-4o-mini	finished	succeeded	33.32	33.33	694	3601.7	695	844524	15321					org.moire.ultrasonic.debug	gpt-4o-mini
+Vespucci	gptdroid	gpt-4o-mini	finished	succeeded	24.0	15.79	703	3602.8	704	1194548	16823					de.blau.android	gpt-4o-mini
+Vinyl Music Player	gptdroid	gpt-4o-mini	finished	succeeded	29.71	15.79	676	3605.7	677	669039	16400					com.poupa.vinylmusicplayer.ci.debug	gpt-4o-mini
+Wallabag	gptdroid	gpt-4o-mini	finished	succeeded	25.61	30.0	690	3602.9	691	842441	15447					fr.gaulupeau.apps.InThePoche.debug	gpt-4o-mini
+Wikipedia Alpha	gptdroid	gpt-4o-mini	finished	succeeded	28.3	3.45	687	3607.2	688	800922	16538					org.wikipedia.alpha	gpt-4o-mini
+WordPress	gptdroid	gpt-4o-mini	finished	succeeded	34.64	4.41	707	3605.2	708	763771	15619					org.wordpress.android	gpt-4o-mini
+A Photo Manager	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	17.0	11.11	595	3600.4	0							de.k3b.android.androFotoFinder	gpt-4o-mini
+Amaze	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	40.29	50.0	1077	3600.7	0							com.amaze.filemanager	gpt-4o-mini
+And Bible	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	46.88	54.84	1123	3601.0	7	2137	7					net.bible.android.activity	gpt-4o-mini
+AnkiDroid	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	37.79	47.62	1105	3600.8	0							com.ichi2.anki	gpt-4o-mini
+AntennaPod Debug	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	55.39	25.0	1112	3600.9	11	6126	11					de.danoeh.antennapod.debug	gpt-4o-mini
+Binary Eye	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	47.09	75.0	1141	3601.0	9	3350	9					de.markusfisch.android.binaryeye.debug	gpt-4o-mini
+Breezy Weather	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	50.83	35.71	1183	3601.0	5	2343	5					org.breezyweather.debug	gpt-4o-mini
+Chess	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	6.03	75.0	1180	3600.6	46	11567	46					jwtc.android.chess	gpt-4o-mini
+Commons	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	40.34	21.43	1218	3600.9	3	2576	3					fr.free.nrw.commons.debug	gpt-4o-mini
+Eventyay Attendee	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	42.34	8.33	1169	3600.5	0							com.eventyay.attendee	gpt-4o-mini
+Fedilab	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	14.45	1.41	1142	3600.5	7	5758	9					app.fedilab.android.debug	gpt-4o-mini
+FeederD	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	47.71	30.0	1079	3600.3	0							com.nononsenseapps.feeder.debug	gpt-4o-mini
+Firefox Lite Dev	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	28.65	3.23	1020	3600.7	0							org.mozilla.rocket.debug.ting	gpt-4o-mini
+Frost Debug	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	34.9	12.5	1148	3600.6	0							com.pitchedapps.frost.debug	gpt-4o-mini
+Geohash Droid	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	12.42	28.57	1093	3600.1	20	7471	20					net.exclaimindustries.geohashdroid	gpt-4o-mini
+GPSLogger	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	40.44	36.36	1078	3600.4	17	3849	17					com.mendhak.gpslogger	gpt-4o-mini
+Infinity For Reddit	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	26.12	14.75	1140	3600.2	11	3728	12					ml.docilealligator.infinityforreddit.debug	gpt-4o-mini
+Jellyfin Android	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	32.38	20.0	1085	3600.2	3	709	3					org.jellyfin.mobile.debug	gpt-4o-mini
+Kiwix	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	44.69	33.33	1186	3600.9	1	260	1					org.kiwix.kiwixmobile	gpt-4o-mini
+Kore	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	10.81	5.88	1035	3600.7	10	4781	10					org.xbmc.kore	gpt-4o-mini
+LibreTorrent	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	45.55	61.11	1139	3600.8	0							org.proninyaroslav.libretorrent.debug	gpt-4o-mini
+MaterialFBook	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	49.78	50.0	1142	3600.3	0							me.zeeroooo.materialfb	gpt-4o-mini
+Money Manager Ex	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	41.25	36.59	1163	3600.7	3	1176	3					com.money.manager.ex	gpt-4o-mini
+Muzei	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	46.85	7.14	818	3600.5	0							net.nurik.roman.muzei	gpt-4o-mini
+My Expenses Debug	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	41.18	19.3	1112	3600.3	0							org.totschnig.myexpenses.debug	gpt-4o-mini
+NewPipe Debug	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	43.26	41.67	1103	3600.8	1	416	1					org.schabi.newpipe.debug	gpt-4o-mini
+Nextcloud	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	51.12	2.86	1096	3600.1	33	11457	51					com.nextcloud.client	gpt-4o-mini
+ODK Collect	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	33.58	27.78	1134	3601.0	0							org.odk.collect.android	gpt-4o-mini
+Omni Notes Alpha	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	33.8	30.77	1094	3600.5	26	8620	43					it.feio.android.omninotes.alpha	gpt-4o-mini
+Open Food Facts	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	29.04	41.67	1070	3600.1	20	5027	25					org.openpetfoodfacts.scanner.debug	gpt-4o-mini
+OpenLauncher	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	57.04	62.5	989	3600.3	2	735	2					com.benny.openlauncher	gpt-4o-mini
+Orgzly Revived	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	45.25	20.0	1072	3601.5	0							com.orgzlyrevived	gpt-4o-mini
+ownCloud	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	24.74	3.85	973	3600.5	0							com.owncloud.android.debug	gpt-4o-mini
+OwnTracks	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	35.84	8.33	1101	3600.9	1	260	1					org.owntracks.android.debug	gpt-4o-mini
+Phonograph DEBUG	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	48.51	40.0	1070	3600.2	0							com.kabouzeid.gramophone.debug	gpt-4o-mini
+RedReader	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	27.65	39.13	1191	3600.5	0							org.quantumbadger.redreader	gpt-4o-mini
+Scarlet Notes FD	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	49.24	26.67	1144	3601.0	19	5914	28					com.bijoysingh.quicknote	gpt-4o-mini
+Simple Alarm Clock	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	69.78	40.0	1133	3600.6	41	17689	41					com.better.alarm.debug	gpt-4o-mini
+SkyTube	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	38.81	30.77	1026	3600.2	0							free.rm.skytube.extra	gpt-4o-mini
+StreetComplete	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	38.08	57.14	1020	3600.0	12	5762	13					de.westnordost.streetcomplete.debug	gpt-4o-mini
+Sunflower	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	66.91	100.0	1024	3600.6	0							com.google.samples.apps.sunflower	gpt-4o-mini
+Trackbook	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	36.97	100.0	1065	3600.7	3	1103	3					org.y20k.trackbook	gpt-4o-mini
+Transistor	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	33.35	50.0	1071	3600.2	0							org.y20k.transistor	gpt-4o-mini
+Twire	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	54.7	65.0	1007	3600.5	4	1555	4					com.perflyst.twire.debug	gpt-4o-mini
+Ultrasonic	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	37.04	33.33	1047	3600.1	13	5698	19					org.moire.ultrasonic.debug	gpt-4o-mini
+Vespucci	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	37.86	52.63	1079	3600.9	14	6315	15					de.blau.android	gpt-4o-mini
+Vinyl Music Player	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	32.67	36.84	1052	3600.3	4	931	5					com.poupa.vinylmusicplayer.ci.debug	gpt-4o-mini
+Wallabag	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	29.04	50.0	1143	3600.4	0							fr.gaulupeau.apps.InThePoche.debug	gpt-4o-mini
+Wikipedia Alpha	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	44.75	27.59	1095	3600.3	2	578	2					org.wikipedia.alpha	gpt-4o-mini
+WordPress	hybriddroid	gpt-4o-mini	finished	completed_forced_stop	37.34	5.88	1108	3601.0	8	2929	9					org.wordpress.android	gpt-4o-mini
+A Photo Manager	llmdroid	gpt-4o-mini	finished	completed_forced_stop	17.1	11.11	420	3600.4	40							de.k3b.android.androFotoFinder	gpt-4o-mini
+Amaze	llmdroid	gpt-4o-mini	finished	completed_forced_stop	27.7	33.33	729	3600.2	90							com.amaze.filemanager	gpt-4o-mini
+And Bible	llmdroid	gpt-4o-mini	finished	completed_forced_stop	29.58	54.84	774	3600.5	94							net.bible.android.activity	gpt-4o-mini
+AnkiDroid	llmdroid	gpt-4o-mini	finished	completed_forced_stop	24.31	57.14	744	3600.1	105							com.ichi2.anki	gpt-4o-mini
+AntennaPod Debug	llmdroid	gpt-4o-mini	finished	completed_forced_stop	24.49	8.33	708	3600.1	91							de.danoeh.antennapod.debug	gpt-4o-mini
+Binary Eye	llmdroid	gpt-4o-mini	finished	completed_forced_stop	36.91	50.0	780	3600.5	62							de.markusfisch.android.binaryeye.debug	gpt-4o-mini
+Breezy Weather	llmdroid	gpt-4o-mini	finished	succeeded	36.91	21.43	680	3601.4	151							org.breezyweather.debug	gpt-4o-mini
+Chess	llmdroid	gpt-4o-mini	finished	completed_forced_stop	44.61	68.75	777	3600.2	80							jwtc.android.chess	gpt-4o-mini
+Commons	llmdroid	gpt-4o-mini	finished	completed_forced_stop	35.73	21.43	755	3600.6	94							fr.free.nrw.commons.debug	gpt-4o-mini
+Eventyay Attendee	llmdroid	gpt-4o-mini	finished	completed_forced_stop	35.01	8.33	774	3600.3	58							com.eventyay.attendee	gpt-4o-mini
+Fedilab	llmdroid	gpt-4o-mini	finished	completed_forced_stop	9.52	1.41	793	3600.5	56							app.fedilab.android.debug	gpt-4o-mini
+FeederD	llmdroid	gpt-4o-mini	finished	completed_forced_stop	49.88	20.0	770	3600.1	74							com.nononsenseapps.feeder.debug	gpt-4o-mini
+Firefox Lite Dev	llmdroid	gpt-4o-mini	finished	completed_forced_stop	21.35	3.23	754	3600.2	46							org.mozilla.rocket.debug.ting	gpt-4o-mini
+Frost Debug	llmdroid	gpt-4o-mini	finished	completed_forced_stop	34.14	12.5	757	3600.5	86							com.pitchedapps.frost.debug	gpt-4o-mini
+Geohash Droid	llmdroid	gpt-4o-mini	finished	completed_forced_stop	12.95	42.86	282	3600.8	28							net.exclaimindustries.geohashdroid	gpt-4o-mini
+GPSLogger	llmdroid	gpt-4o-mini	finished	completed_forced_stop	30.49	27.27	762	3600.9	83							com.mendhak.gpslogger	gpt-4o-mini
+Infinity For Reddit	llmdroid	gpt-4o-mini	finished	completed_forced_stop	18.67	11.48	763	3600.0	73							ml.docilealligator.infinityforreddit.debug	gpt-4o-mini
+Jellyfin Android	llmdroid	gpt-4o-mini	finished	completed_forced_stop	32.24	40.0	779	3600.7	58							org.jellyfin.mobile.debug	gpt-4o-mini
+Kiwix	llmdroid	gpt-4o-mini	finished	completed_forced_stop	36.14	33.33	766	3600.0	93							org.kiwix.kiwixmobile	gpt-4o-mini
+Kore	llmdroid	gpt-4o-mini	finished	completed_forced_stop	18.56	5.88	694	3600.3	50							org.xbmc.kore	gpt-4o-mini
+LibreTorrent	llmdroid	gpt-4o-mini	finished	completed_forced_stop	34.53	33.33	274	3600.9	21							org.proninyaroslav.libretorrent.debug	gpt-4o-mini
+MaterialFBook	llmdroid	gpt-4o-mini	finished	completed_forced_stop	40.41	25.0	763	3600.1	74							me.zeeroooo.materialfb	gpt-4o-mini
+Money Manager Ex	llmdroid	gpt-4o-mini	finished	completed_forced_stop	15.63	9.76	771	3600.7	56							com.money.manager.ex	gpt-4o-mini
+Muzei	llmdroid	gpt-4o-mini	finished	completed_forced_stop	38.0	7.14	717	3600.8	36							net.nurik.roman.muzei	gpt-4o-mini
+My Expenses Debug	llmdroid	gpt-4o-mini	finished	completed_forced_stop	29.35	22.81	776	3600.7	94							org.totschnig.myexpenses.debug	gpt-4o-mini
+NewPipe Debug	llmdroid	gpt-4o-mini	finished	completed_forced_stop	30.25	50.0	756	3600.8	119							org.schabi.newpipe.debug	gpt-4o-mini
+Nextcloud	llmdroid	gpt-4o-mini	finished	completed_forced_stop	47.94	8.57	745	3600.4	114							com.nextcloud.client	gpt-4o-mini
+ODK Collect	llmdroid	gpt-4o-mini	finished	completed_forced_stop	22.99	30.56	778	3600.0	88							org.odk.collect.android	gpt-4o-mini
+Omni Notes Alpha	llmdroid	gpt-4o-mini	finished	completed_forced_stop	31.1	15.38	764	3600.8	96							it.feio.android.omninotes.alpha	gpt-4o-mini
+Open Food Facts	llmdroid	gpt-4o-mini	finished	completed_forced_stop	22.14	37.5	451	3601.0	55							org.openpetfoodfacts.scanner.debug	gpt-4o-mini
+OpenLauncher	llmdroid	gpt-4o-mini	finished	completed_forced_stop	36.12	50.0	703	3600.7	87							com.benny.openlauncher	gpt-4o-mini
+Orgzly Revived	llmdroid	gpt-4o-mini	finished	completed_forced_stop	31.65	10.0	739	3600.9	105							com.orgzlyrevived	gpt-4o-mini
+ownCloud	llmdroid	gpt-4o-mini	finished	completed_forced_stop	24.49	3.85	822	3600.6	30							com.owncloud.android.debug	gpt-4o-mini
+OwnTracks	llmdroid	gpt-4o-mini	finished	completed_forced_stop	33.38	8.33	776	3600.9	73							org.owntracks.android.debug	gpt-4o-mini
+Phonograph DEBUG	llmdroid	gpt-4o-mini	finished	completed_forced_stop	26.24	26.67	761	3600.7	58							com.kabouzeid.gramophone.debug	gpt-4o-mini
+RedReader	llmdroid	gpt-4o-mini	finished	completed_forced_stop	22.5	17.39	818	3600.1	63							org.quantumbadger.redreader	gpt-4o-mini
+Scarlet Notes FD	llmdroid	gpt-4o-mini	finished	completed_forced_stop	41.48	26.67	769	3600.1	66							com.bijoysingh.quicknote	gpt-4o-mini
+Simple Alarm Clock	llmdroid	gpt-4o-mini	finished	completed_forced_stop	50.98	40.0	774	3600.4	85							com.better.alarm.debug	gpt-4o-mini
+SkyTube	llmdroid	gpt-4o-mini	finished	completed_forced_stop	20.27	23.08	753	3600.2	101							free.rm.skytube.extra	gpt-4o-mini
+StreetComplete	llmdroid	gpt-4o-mini	finished	completed_forced_stop	34.63	57.14	779	3600.7	63							de.westnordost.streetcomplete.debug	gpt-4o-mini
+Sunflower	llmdroid	gpt-4o-mini	finished	completed_forced_stop	50.22	100.0	745	3600.7	54							com.google.samples.apps.sunflower	gpt-4o-mini
+Trackbook	llmdroid	gpt-4o-mini	finished	completed_forced_stop	30.62	100.0	743	3600.3	65							org.y20k.trackbook	gpt-4o-mini
+Transistor	llmdroid	gpt-4o-mini	finished	completed_forced_stop	25.63	50.0	783	3601.0	59							org.y20k.transistor	gpt-4o-mini
+Twire	llmdroid	gpt-4o-mini	finished	completed_forced_stop	28.49	20.0	724	3600.7	89							com.perflyst.twire.debug	gpt-4o-mini
+Ultrasonic	llmdroid	gpt-4o-mini	finished	completed_forced_stop	43.38	33.33	762	3600.6	105							org.moire.ultrasonic.debug	gpt-4o-mini
+Vespucci	llmdroid	gpt-4o-mini	finished	completed_forced_stop	25.44	31.58	754	3600.7	102							de.blau.android	gpt-4o-mini
+Vinyl Music Player	llmdroid	gpt-4o-mini	finished	completed_forced_stop	24.75	31.58	774	3600.3	81							com.poupa.vinylmusicplayer.ci.debug	gpt-4o-mini
+Wallabag	llmdroid	gpt-4o-mini	finished	completed_forced_stop	22.37	50.0	771	3600.4	84							fr.gaulupeau.apps.InThePoche.debug	gpt-4o-mini
+Wikipedia Alpha	llmdroid	gpt-4o-mini	finished	completed_forced_stop	38.0	29.31	749	3600.5	181							org.wikipedia.alpha	gpt-4o-mini
+WordPress	llmdroid	gpt-4o-mini	finished	completed_forced_stop	34.67	5.88	777	3600.4	70							org.wordpress.android	gpt-4o-mini

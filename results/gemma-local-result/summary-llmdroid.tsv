@@ -1,0 +1,51 @@
+app	state	code_coverage_percent	activity_coverage_percent	actions	duration_seconds	llm_calls
+A Photo Manager	finished	17.16	11.11	46	3600.2	5
+Amaze	finished	32.01	33.33	163	3600.0	22
+And Bible	finished	34.96	32.26	186	3600.5	35
+AnkiDroid	finished	31.47	71.43	564	3600.4	100
+AntennaPod Debug	finished	26.61	8.33	651	3600.8	88
+Binary Eye	finished	34.7	75.0	613	3600.6	69
+Breezy Weather	finished	36.24	25.0	610	3600.8	132
+Chess	finished	23.05	81.25	690	3600.4	102
+Commons	finished	35.73	21.43	534	3600.3	918
+Eventyay Attendee	finished	37.72	8.33	275	3600.0	35
+Fedilab	finished	14.67	1.41	674	3600.7	85
+FeederD	finished	46.26	20.0	784	3600.5	93
+Firefox Lite Dev	finished	21.23	3.23	166	3600.1	20
+Frost Debug	finished	34.03	12.5	730	3600.0	39
+Geohash Droid	finished	13.56	28.57	338	3600.0	32
+GPSLogger	finished	30.35	27.27	157	3600.4	12
+Infinity For Reddit	finished	20.23	9.84	157	3600.7	26
+Jellyfin Android	finished	39.13	20.0	715	3600.9	63
+Kiwix	finished	32.56	16.67	110	3600.6	991
+Kore	finished	17.06	5.88	745	3601.0	53
+LibreTorrent	finished	34.53	38.89	297	3600.3	29
+MaterialFBook	finished	40.41	25.0	735	3600.5	100
+Money Manager Ex	finished	28.33	41.46	729	3600.5	96
+Muzei	finished	38.0	7.14	397	3600.6	49
+My Expenses Debug	finished	25.91	21.05	795	3600.7	104
+NewPipe Debug	finished	30.77	25.0	108	3600.7	16
+Nextcloud	finished	49.07	5.71	237	3600.7	44
+ODK Collect	finished	26.91	27.78	444	3600.7	1037
+Omni Notes Alpha	finished	31.08	38.46	794	3600.0	81
+Open Food Facts	finished	24.38	45.83	328	3600.2	55
+OpenLauncher	finished	33.14	25.0	721	3600.9	77
+Orgzly Revived	finished	24.45	10.0	149	3600.3	993
+ownCloud	finished	24.47	3.85	51	3600.5	3
+OwnTracks	finished	33.8	8.33	693	3600.6	75
+Phonograph DEBUG	finished	35.37	40.0	400	3601.0	48
+RedReader	finished	39.53	30.43	747	3600.5	100
+Scarlet Notes FD	finished	36.34	26.67	790	3600.1	79
+Simple Alarm Clock	finished	57.71	40.0	692	3601.0	87
+SkyTube	finished	21.26	23.08	679	3600.1	97
+StreetComplete	finished	33.52	57.14	687	3601.0	84
+Sunflower	finished	60.44	100.0	737	3600.4	69
+Trackbook	finished	33.39	100.0	676	3600.1	69
+Transistor	finished	23.42	50.0	50	3600.0	8
+Twire	finished	27.02	30.0	618	3600.3	93
+Ultrasonic	finished	35.52	33.33	730	3600.9	76
+Vespucci	finished	27.05	26.32	105	3600.1	24
+Vinyl Music Player	finished	26.65	36.84	567	3601.0	80
+Wallabag	finished	20.81	60.0	486	3600.8	72
+Wikipedia Alpha	finished	39.08	18.97	344	3600.7	88
+WordPress	finished	34.14	5.88	766	3600.1	52

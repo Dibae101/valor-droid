@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools==75.8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "valordroid"
+version = "0.4.0"
+description = "Verified action ledgers and outcome-aware routing for Android coverage exploration"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "VALOR-Droid research project"}]
+dependencies = []
+
+[project.optional-dependencies]
+webview = ["websocket-client==1.8.0"]
+uiautomator2 = ["uiautomator2==3.7.0"]
+
+[project.scripts]
+valordroid = "valordroid.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+# The regression suite uses only the standard library, so it needs no test
+# dependency and runs offline:
+#   PYTHONPATH=valordroid/src python3 -m unittest discover -s valordroid/tests -t valordroid
+
+[tool.setuptools.packages.find]
+where = ["src"]

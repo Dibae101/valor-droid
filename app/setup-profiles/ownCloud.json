@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "package": "com.owncloud.android.debug",
+  "profile": "connect-and-sign-in-to-self-hosted-owncloud",
+  "persona": "disposable-staging-user",
+  "timeout_seconds": 300.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {
+    "login-name": "VALORDROID_OWNCLOUD_USER",
+    "login-password": "VALORDROID_OWNCLOUD_PASSWORD"
+  },
+  "steps": [
+    {
+      "id": "wait-for-login-screen",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 90.0,
+          "parameters": {
+            "selector": {
+              "package": "com.owncloud.android.debug",
+              "resource_id": "com.owncloud.android.debug:id/hostUrlInput"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "focus-server-address",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/hostUrlInput"
+        }
+      }
+    },
+    {
+      "id": "enter-server-address",
+      "kind": "input_text",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": true,
+        "value": "http://172.31.47.44:8082",
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/hostUrlInput"
+        }
+      }
+    },
+    {
+      "id": "check-server",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/embeddedCheckServerButton"
+        }
+      }
+    },
+    {
+      "id": "accept-insecure-http",
+      "kind": "tap",
+      "required": false,
+      "timeout_seconds": 25.0,
+      "parameters": {
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "android:id/button1"
+        }
+      }
+    },
+    {
+      "id": "wait-for-credentials",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 60.0,
+          "parameters": {
+            "selector": {
+              "package": "com.owncloud.android.debug",
+              "resource_id": "com.owncloud.android.debug:id/account_username"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "focus-username",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/account_username"
+        }
+      }
+    },
+    {
+      "id": "enter-username",
+      "kind": "input_secret",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": true,
+        "secret_slot": "login-name",
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/account_username"
+        }
+      }
+    },
+    {
+      "id": "focus-password",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/account_password"
+        }
+      }
+    },
+    {
+      "id": "enter-password",
+      "kind": "input_secret",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": true,
+        "secret_slot": "login-password",
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/account_password"
+        }
+      }
+    },
+    {
+      "id": "press-log-in",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/loginButton"
+        }
+      }
+    },
+    {
+      "id": "wait-for-files",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_absent",
+          "timeout_seconds": 90.0,
+          "parameters": {
+            "selector": {
+              "package": "com.owncloud.android.debug",
+              "resource_id": "com.owncloud.android.debug:id/loginButton"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "prove-state-survives-restart",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {}
+    }
+  ],
+  "success_predicates": [
+    {
+      "kind": "package_foreground",
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "package": "com.owncloud.android.debug"
+      }
+    },
+    {
+      "kind": "node_absent",
+      "timeout_seconds": 30.0,
+      "parameters": {
+        "selector": {
+          "package": "com.owncloud.android.debug",
+          "resource_id": "com.owncloud.android.debug:id/loginButton"
+        }
+      }
+    }
+  ]
+}

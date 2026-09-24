@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "profile": "public-front-page-after-terms-acceptance",
+  "persona": "anonymous-read-only-user",
+  "package": "org.quantumbadger.redreader",
+  "timeout_seconds": 300.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-reddit-terms-acceptance",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.quantumbadger.redreader", "resource_id": "org.quantumbadger.redreader:id/terms_button_accept", "text": "Accept"}}}}
+    },
+    {
+      "id": "accept-reddit-terms",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "org.quantumbadger.redreader", "resource_id": "org.quantumbadger.redreader:id/terms_button_accept", "text": "Accept"}}
+    },
+    {
+      "id": "restart-after-acceptance",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-front-page-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 120.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 120.0, "parameters": {"selector": {"package": "org.quantumbadger.redreader", "resource_id": "org.quantumbadger.redreader:id/list_item_text", "text": "Front Page"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "org.quantumbadger.redreader"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "org.quantumbadger.redreader/.activities.MainActivity"}},
+    {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.quantumbadger.redreader", "resource_id": "org.quantumbadger.redreader:id/list_item_text", "text": "Front Page"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "org.quantumbadger.redreader", "resource_id": "org.quantumbadger.redreader:id/terms_button_accept", "text": "Accept"}}}
+  ]
+}

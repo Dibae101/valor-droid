@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "provider": "disabled",
+  "model": "",
+  "base_url": null,
+  "region": null,
+  "project": null,
+  "timeout_seconds": 30.0,
+  "max_calls_per_run": 24,
+  "max_calls_per_purpose": 8,
+  "max_prompt_characters": 8000,
+  "max_candidates_offered": 20,
+  "max_response_characters": 4000,
+  "recovery_escalation_threshold": 2,
+  "field_retry_threshold": 1
+}

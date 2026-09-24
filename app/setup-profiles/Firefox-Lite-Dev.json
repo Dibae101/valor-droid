@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "profile": "home-shell-after-content-and-shopping-coachmarks",
+  "persona": "anonymous-browser-test-user",
+  "package": "org.mozilla.rocket.debug.ting",
+  "timeout_seconds": 360.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-content-services-acknowledgement",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/next", "text": "OK"}}}}
+    },
+    {
+      "id": "acknowledge-content-services",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/next", "text": "OK"}}
+    },
+    {
+      "id": "restart-to-surface-shopping-coachmark",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-shopping-coachmark-target",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/spotlight_placeholder"}}}}
+    },
+    {
+      "id": "open-shopping-search-from-coachmark",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/spotlight_placeholder"}}
+    },
+    {
+      "id": "wait-for-shopping-search-page",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/search_keyword_edit"}}}}
+    },
+    {
+      "id": "return-from-shopping-search",
+      "kind": "back",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {}
+    },
+    {
+      "id": "restart-after-all-coachmarks",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-home-input-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/home_fragment_fake_input"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "org.mozilla.rocket.debug.ting"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "org.mozilla.rocket.debug.ting/org.mozilla.focus.activity.MainActivity"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/home_fragment_fake_input"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/next", "text": "OK"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/spotlight_placeholder"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "org.mozilla.rocket.debug.ting", "resource_id": "org.mozilla.rocket.debug.ting:id/shopping_search_plateform_onboarding_title", "text": "Smart Shopping Search"}}}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "backend": "androlog-logcat-method-v1",
+  "backend_version": "REPLACE_WITH_INSTRUMENTER_VERSION",
+  "inclusion_policy": "all_application_methods",
+  "instrumented_apk_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "original_apk_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "original_package_name": "org.example.app",
+  "original_version_code": "1",
+  "original_version_name": "1.0",
+  "package_name": "org.example.app",
+  "producer": "REPLACE_WITH_EXTERNAL_INSTRUMENTER",
+  "producer_version": "REPLACE_WITH_PRODUCER_VERSION",
+  "schema_version": 2,
+  "unit_count": 1,
+  "unit_ids_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "version_code": "1",
+  "version_name": "1.0"
+}

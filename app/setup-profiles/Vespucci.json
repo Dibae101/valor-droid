@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "profile": "offline-map-shell-after-welcome",
+  "persona": "offline-map-test-user",
+  "package": "de.blau.android",
+  "timeout_seconds": 300.0,
+  "allowed_foreign_packages": ["android"],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-welcome-dialog",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "de.blau.android", "resource_id": "android:id/button1", "text": "OKAY"}}}}
+    },
+    {
+      "id": "dismiss-welcome",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "de.blau.android", "resource_id": "android:id/button1", "text": "OKAY"}}
+    },
+    {
+      "id": "wait-for-map-without-location",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "de.blau.android", "resource_id": "de.blau.android:id/location_button_no_location", "text": "GO TO MAP"}}}}
+    },
+    {
+      "id": "continue-without-location",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "de.blau.android", "resource_id": "de.blau.android:id/location_button_no_location", "text": "GO TO MAP"}}
+    },
+    {
+      "id": "dismiss-android-fullscreen-education-if-present",
+      "kind": "tap",
+      "required": false,
+      "timeout_seconds": 4.0,
+      "parameters": {"selector": {"package": "android", "resource_id": "android:id/ok", "text": "GOT IT"}}
+    },
+    {
+      "id": "restart-after-onboarding",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-map-lock-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "de.blau.android", "resource_id": "de.blau.android:id/floatingLock"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "de.blau.android"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "de.blau.android/.Main"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "de.blau.android", "resource_id": "de.blau.android:id/floatingLock"}}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "de.blau.android", "resource_id": "de.blau.android:id/map_view"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "de.blau.android", "resource_id": "android:id/button1", "text": "OKAY"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "de.blau.android", "resource_id": "de.blau.android:id/location_button_no_location", "text": "GO TO MAP"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "android", "resource_id": "android:id/ok", "text": "GOT IT"}}}
+  ]
+}

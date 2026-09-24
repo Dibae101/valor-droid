@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "profile": "open-hash-pinned-local-database",
+  "persona": "local-finance-test-user",
+  "package": "com.money.manager.ex",
+  "timeout_seconds": 600.0,
+  "allowed_foreign_packages": ["com.android.documentsui"],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "push-empty-database-fixture",
+      "kind": "push_file",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"source": "fixtures/Money-Manager-Ex-empty.mmb", "destination": "/sdcard/Download/valordroid-mmex-local.mmb", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+    },
+    {
+      "id": "wait-for-tutorial-close",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/skipTextView", "text": "CLOSE"}}}}
+    },
+    {
+      "id": "close-tutorial",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/skipTextView", "text": "CLOSE"}}
+    },
+    {
+      "id": "return-to-database-setup",
+      "kind": "back",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-open-database",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/openDatabaseButton", "text": "OPEN DATABASE"}}}}
+    },
+    {
+      "id": "open-existing-database",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/openDatabaseButton", "text": "OPEN DATABASE"}}
+    },
+    {
+      "id": "wait-for-document-roots-control",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.android.documentsui", "class_name": "android.widget.ImageButton", "content_description": "Show roots"}}}}
+    },
+    {
+      "id": "show-document-roots",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.android.documentsui", "class_name": "android.widget.ImageButton", "content_description": "Show roots"}}
+    },
+    {
+      "id": "wait-for-downloads-root",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.android.documentsui", "resource_id": "android:id/title", "text": "Downloads"}}}}
+    },
+    {
+      "id": "open-downloads-root",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.android.documentsui", "resource_id": "android:id/title", "text": "Downloads"}}
+    },
+    {
+      "id": "wait-for-pinned-database-file",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.android.documentsui", "resource_id": "android:id/title", "text": "valordroid-mmex-local.mmb"}}}}
+    },
+    {
+      "id": "select-pinned-database-file",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.android.documentsui", "resource_id": "android:id/title", "text": "valordroid-mmex-local.mmb"}}
+    },
+    {
+      "id": "wait-for-optional-password-confirmation",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 90.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/btnSubmit", "text": "OK"}}}}
+    },
+    {
+      "id": "accept-blank-optional-password",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/btnSubmit", "text": "OK"}}
+    },
+    {
+      "id": "wait-for-main-account-control",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 120.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 120.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/buttonAddAccount", "text": "CREATE NEW ACCOUNT"}}}}
+    },
+    {
+      "id": "restart-after-database-selection",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-persistent-main-account-control",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 90.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/buttonAddAccount", "text": "CREATE NEW ACCOUNT"}}}}
+    },
+    {
+      "id": "wait-for-persistent-database-name",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/currentDatabaseTextView", "text_contains": "valordroid-mmex-local.mmb"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "com.money.manager.ex"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "com.money.manager.ex/com.money.manager.ex.home.MainActivity"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/buttonAddAccount", "text": "CREATE NEW ACCOUNT"}}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/currentDatabaseTextView", "text_contains": "valordroid-mmex-local.mmb"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/skipTextView", "text": "CLOSE"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/createDatabaseButton", "text": "CREATE DATABASE"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "com.money.manager.ex", "resource_id": "com.money.manager.ex:id/openDatabaseButton", "text": "OPEN DATABASE"}}},
+    {"kind": "device_file_sha256", "timeout_seconds": 30.0, "parameters": {"path": "/sdcard/Download/valordroid-mmex-local.mmb", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}}
+  ]
+}

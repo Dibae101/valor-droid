@@ -1,0 +1,4 @@
+# Runtime dependencies for VALOR-Droid (mirrors app/pyproject.toml extras).
+# The core explorer is stdlib-only; these enable on-device automation.
+uiautomator2==3.7.0
+websocket-client==1.8.0

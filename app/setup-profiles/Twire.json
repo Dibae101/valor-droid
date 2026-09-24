@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "profile": "anonymous-shell-after-native-skip",
+  "persona": "anonymous-test-user",
+  "package": "com.perflyst.twire.debug",
+  "timeout_seconds": 300.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-welcome-continue",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/continue_circle"}}}}
+    },
+    {
+      "id": "continue-welcome",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/continue_circle"}}
+    },
+    {
+      "id": "wait-for-native-skip",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/skip_text", "text": "SKIP"}}}}
+    },
+    {
+      "id": "skip-twitch-sign-in",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/skip_text", "text": "SKIP"}}
+    },
+    {
+      "id": "wait-for-changelog-done",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/done_button", "text": "DONE"}}}}
+    },
+    {
+      "id": "dismiss-changelog",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/done_button", "text": "DONE"}}
+    },
+    {
+      "id": "restart-after-bypass",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-anonymous-main-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/error_view", "text": "There's nothing here"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "com.perflyst.twire.debug"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "com.perflyst.twire.debug/com.perflyst.twire.activities.main.MyStreamsActivity"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/error_view", "text": "There's nothing here"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/continue_circle"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/skip_text", "text": "SKIP"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "com.perflyst.twire.debug", "resource_id": "com.perflyst.twire.debug:id/done_button", "text": "DONE"}}}
+  ]
+}

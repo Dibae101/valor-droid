@@ -1,0 +1,151 @@
+app	package	version_name	tool	run_status	minutes	actions	code_coverage_percent	covered_units	total_units	activity_coverage_percent	activities_covered	activities_declared	llm_calls	llm_input_tokens	llm_output_tokens	llm_cost_usd	llm_response_chars	crash_detected	anr_detected	tool_restarts	earlier_attempts	evidence
+A Photo Manager	de.k3b.android.androFotoFinder	0.6.4.180314	gptdroid	completed_no_actions	60.0	0				11.11	1	9	1	125	50	0.0		False	False	0	9	results/gemma-local-result/A_Photo_Manager/gptdroid
+A Photo Manager	de.k3b.android.androFotoFinder	0.6.4.180314	llmdroid	completed_forced_stop	60.0	46	17.16	535	3117	11.11	1	9	5				1015	False	True	0	0	results/gemma-local-result/A_Photo_Manager/llmdroid
+A Photo Manager	de.k3b.android.androFotoFinder	0.6.4.180314	hybriddroid	completed_forced_stop	60.0	573	17.1	533	3117	11.11	1	9	0					True	True	0	2	results/gemma-local-result/A_Photo_Manager/hybriddroid
+Amaze	com.amaze.filemanager	3.2.1	gptdroid	succeeded	60.1	763	26.19	1929	7366	16.67	1	6	764	2417875	19859	0.0983		False	False	0	0	results/gemma-local-result/Amaze/gptdroid
+Amaze	com.amaze.filemanager	3.2.1	llmdroid	completed_forced_stop	60.0	163	32.01	2459	7681	33.33	2	6	22				5298	False	False	0	0	results/gemma-local-result/Amaze/llmdroid
+Amaze	com.amaze.filemanager	3.2.1	hybriddroid	completed_forced_stop	60.0	1101	35.35	3205	9066	33.33	2	6	0					True	False	0	1	results/gemma-local-result/Amaze/hybriddroid
+And Bible	net.bible.android.activity	3.2.327	gptdroid	succeeded	60.1	754	27.6	1435	5200	6.45	2	31	755	678309	20383	0.0288		False	False	0	1	results/gemma-local-result/And_Bible/gptdroid
+And Bible	net.bible.android.activity	3.2.327	llmdroid	completed_forced_stop	60.0	186	34.96	4588	13125	32.26	10	31	35				8978	True	False	0	1	results/gemma-local-result/And_Bible/llmdroid
+And Bible	net.bible.android.activity	3.2.327	hybriddroid	completed_forced_stop	60.0	1133	50.67	8155	16093	58.06	18	31	7	2532	25	0.0001		False	False	0	2	results/gemma-local-result/And_Bible/hybriddroid
+AnkiDroid	com.ichi2.anki	2.6beta6	gptdroid	succeeded	60.0	752	18.65	512	2746	9.52	2	21	753	959622	17748	0.0398		False	False	0	0	results/gemma-local-result/AnkiDroid/gptdroid
+AnkiDroid	com.ichi2.anki	2.6beta6	llmdroid	completed_forced_stop	60.0	564	31.47	1441	4579	71.43	15	21	100				20203	False	False	0	0	results/gemma-local-result/AnkiDroid/llmdroid
+AnkiDroid	com.ichi2.anki	2.6beta6	hybriddroid	completed_forced_stop	60.0	1089	38.59	2341	6066	57.14	12	21	0					True	False	0	1	results/gemma-local-result/AnkiDroid/hybriddroid
+AntennaPod Debug	de.danoeh.antennapod.debug	3.5.0	gptdroid	succeeded	60.0	602	23.97	2109	8799	16.67	2	12	603	558767	14795	0.0235		False	False	0	0	results/gemma-local-result/AntennaPod_Debug/gptdroid
+AntennaPod Debug	de.danoeh.antennapod.debug	3.5.0	llmdroid	completed_forced_stop	60.0	651	26.61	258998	973175	8.33	1	12	88				22866	False	False	13	4	results/gemma-local-result/AntennaPod_Debug/llmdroid
+AntennaPod Debug	de.danoeh.antennapod.debug	3.5.0	hybriddroid	completed_forced_stop	60.0	1094	52.74	11544	21889	25.0	3	12	3	1058	10	0.0		False	False	0	1	results/gemma-local-result/AntennaPod_Debug/hybriddroid
+Binary Eye	de.markusfisch.android.binaryeye.debug	1.63.12	gptdroid	succeeded	60.0	663	31.26	497	1590	50.0	2	4	664	616046	16591	0.026		False	False	0	0	results/gemma-local-result/Binary_Eye/gptdroid
+Binary Eye	de.markusfisch.android.binaryeye.debug	1.63.12	llmdroid	completed_forced_stop	60.0	613	34.7	729	2101	75.0	3	4	69				8313	True	False	0	0	results/gemma-local-result/Binary_Eye/llmdroid
+Binary Eye	de.markusfisch.android.binaryeye.debug	1.63.12	hybriddroid	completed_forced_stop	60.0	1125	46.66	2488	5332	50.0	2	4	0					True	False	0	0	results/gemma-local-result/Binary_Eye/hybriddroid
+Breezy Weather	org.breezyweather.debug	5.2.8-r1	gptdroid	succeeded	60.1	627	26.82	3727	13894	7.14	2	28	628	1468957	18322	0.0602		False	False	0	0	results/gemma-local-result/Breezy_Weather/gptdroid
+Breezy Weather	org.breezyweather.debug	5.2.8-r1	llmdroid	completed_forced_stop	60.0	610	36.24	722369	1993464	25.0	7	28	132				36487	False	False	8	0	results/gemma-local-result/Breezy_Weather/llmdroid
+Breezy Weather	org.breezyweather.debug	5.2.8-r1	hybriddroid	completed_forced_stop	60.0	1191	49.56	16451	33192	35.71	10	28	3	1638	9	0.0001		False	False	0	0	results/gemma-local-result/Breezy_Weather/hybriddroid
+Chess	jwtc.android.chess	9.5.0	gptdroid	succeeded	60.0	673	58.42	1180	2020	18.75	3	16	674	2755402	17699	0.1116		False	False	0	1	results/gemma-local-result/Chess/gptdroid
+Chess	jwtc.android.chess	9.5.0	llmdroid	completed_forced_stop	60.0	690	23.05	671	2911	81.25	13	16	102				25452	False	False	0	0	results/gemma-local-result/Chess/llmdroid
+Chess	jwtc.android.chess	9.5.0	hybriddroid	completed_forced_stop	60.0	1144	33.36	1218	3651	62.5	10	16	69	18227	207	0.0007		True	False	0	1	results/gemma-local-result/Chess/hybriddroid
+Commons	fr.free.nrw.commons.debug	2.7.1-debug-HEAD~c6b74e72f	gptdroid	succeeded	60.0	687	36.81	522	1418	14.29	2	14	688	745853	22389	0.0316		False	False	0	0	results/gemma-local-result/Commons/gptdroid
+Commons	fr.free.nrw.commons.debug	2.7.1-debug-HEAD~c6b74e72f	llmdroid	completed_forced_stop	60.0	534	35.73	502	1405	21.43	3	14	918				363989	False	False	0	1	results/gemma-local-result/Commons/llmdroid
+Commons	fr.free.nrw.commons.debug	2.7.1-debug-HEAD~c6b74e72f	hybriddroid	completed_forced_stop	60.0	1202	39.31	572	1455	14.29	2	14	0					False	False	0	1	results/gemma-local-result/Commons/hybriddroid
+Eventyay Attendee	com.eventyay.attendee	0.5.0	gptdroid	succeeded	60.0	720	34.25	1500	4380	8.33	1	12	721	606214	18050	0.0257		False	False	0	0	results/gemma-local-result/Eventyay_Attendee/gptdroid
+Eventyay Attendee	com.eventyay.attendee	0.5.0	llmdroid	completed_forced_stop	60.0	275	37.72	2939	7792	8.33	1	12	35				5365	True	False	0	0	results/gemma-local-result/Eventyay_Attendee/llmdroid
+Eventyay Attendee	com.eventyay.attendee	0.5.0	hybriddroid	completed_forced_stop	60.0	1153	37.97	2648	6974	8.33	1	12	0					True	False	0	2	results/gemma-local-result/Eventyay_Attendee/hybriddroid
+Fedilab	app.fedilab.android.debug	3.28.0	gptdroid	succeeded	60.1	722	8.41	235	2794	2.82	2	71	723	1200623	27220	0.0502		False	False	0	3	results/gemma-local-result/Fedilab/gptdroid
+Fedilab	app.fedilab.android.debug	3.28.0	llmdroid	completed_forced_stop	60.0	674	14.67	523	3566	1.41	1	71	85				9913	True	False	0	4	results/gemma-local-result/Fedilab/llmdroid
+Fedilab	app.fedilab.android.debug	3.28.0	hybriddroid	completed_forced_stop	60.0	1154	14.37	500	3480	1.41	1	71	1	885	4	0.0		True	False	0	3	results/gemma-local-result/Fedilab/hybriddroid
+FeederD	com.nononsenseapps.feeder.debug	2.6.33	gptdroid	succeeded	60.1	747	46.84	11018	23525	10.0	1	10	748	785099	20961	0.0331		False	False	0	0	results/gemma-local-result/FeederD/gptdroid
+FeederD	com.nononsenseapps.feeder.debug	2.6.33	llmdroid	completed_forced_stop	60.0	784	46.26	11551	24971	20.0	2	10	93				10701	False	False	0	0	results/gemma-local-result/FeederD/llmdroid
+FeederD	com.nononsenseapps.feeder.debug	2.6.33	hybriddroid	completed_forced_stop	60.0	1100	47.29	9893	20919	30.0	3	10	3	1277	12	0.0001		True	False	0	1	results/gemma-local-result/FeederD/hybriddroid
+Firefox Lite Dev	org.mozilla.rocket.debug.ting	2.1.20.debug.ting	gptdroid	succeeded	60.1	755	44.0	4007	9106	9.68	3	31	756	769014	20429	0.0324		False	False	0	1	results/gemma-local-result/Firefox_Lite_Dev/gptdroid
+Firefox Lite Dev	org.mozilla.rocket.debug.ting	2.1.20.debug.ting	llmdroid	completed_forced_stop	60.0	166	21.23	689	3246	3.23	1	31	20				2241	False	False	0	1	results/gemma-local-result/Firefox_Lite_Dev/llmdroid
+Firefox Lite Dev	org.mozilla.rocket.debug.ting	2.1.20.debug.ting	hybriddroid	completed_forced_stop	60.0	1040	28.65	795	2775	3.23	1	31	0					True	False	0	2	results/gemma-local-result/Firefox_Lite_Dev/hybriddroid
+Frost Debug	com.pitchedapps.frost.debug	2.2.1-debug	gptdroid	succeeded	60.0	740	33.82	936	2768	12.5	2	16	741	898013	21259	0.0376		False	False	0	0	results/gemma-local-result/Frost_Debug/gptdroid
+Frost Debug	com.pitchedapps.frost.debug	2.2.1-debug	llmdroid	completed_forced_stop	60.0	730	34.03	942	2768	12.5	2	16	39				10888	False	False	0	1	results/gemma-local-result/Frost_Debug/llmdroid
+Frost Debug	com.pitchedapps.frost.debug	2.2.1-debug	hybriddroid	completed_forced_stop	60.0	1156	34.68	960	2768	12.5	2	16	0					False	False	0	1	results/gemma-local-result/Frost_Debug/hybriddroid
+Geohash Droid	net.exclaimindustries.geohashdroid	0.9.4	gptdroid	succeeded	60.0	30	17.25	236	1368	14.29	1	7	31	31121	807	0.0013		True	False	0	1	results/gemma-local-result/Geohash_Droid/gptdroid
+Geohash Droid	net.exclaimindustries.geohashdroid	0.9.4	llmdroid	completed_forced_stop	60.0	338	13.56	202	1490	28.57	2	7	32				5360	True	False	0	1	results/gemma-local-result/Geohash_Droid/llmdroid
+Geohash Droid	net.exclaimindustries.geohashdroid	0.9.4	hybriddroid	completed_forced_stop	60.0	1087	12.42	184	1482	42.86	3	7	6	2772	24	0.0001		True	False	0	1	results/gemma-local-result/Geohash_Droid/hybriddroid
+GPSLogger	com.mendhak.gpslogger	131-rc2	gptdroid	succeeded	60.1	642	23.16	493	2129	9.09	1	11	643	1167877	18073	0.0482		False	False	0	3	results/gemma-local-result/GPSLogger/gptdroid
+GPSLogger	com.mendhak.gpslogger	131-rc2	llmdroid	completed_forced_stop	60.0	157	30.35	1022	3367	27.27	3	11	12				1278	False	False	0	1	results/gemma-local-result/GPSLogger/llmdroid
+GPSLogger	com.mendhak.gpslogger	131-rc2	hybriddroid	completed_forced_stop	60.0	1097	40.3	2431	6032	36.36	4	11	6	1357	18	0.0001		True	False	0	3	results/gemma-local-result/GPSLogger/hybriddroid
+Infinity For Reddit	ml.docilealligator.infinityforreddit.debug	7.3.4 (DEBUG)	gptdroid	succeeded	60.1	662	16.11	2400	14898	3.28	2	61	663	767224	15277	0.0319		False	False	0	0	results/gemma-local-result/Infinity_For_Reddit/gptdroid
+Infinity For Reddit	ml.docilealligator.infinityforreddit.debug	7.3.4 (DEBUG)	llmdroid	completed_forced_stop	60.0	157	20.23	3284	16234	9.84	6	61	26				6257	False	False	0	0	results/gemma-local-result/Infinity_For_Reddit/llmdroid
+Infinity For Reddit	ml.docilealligator.infinityforreddit.debug	7.3.4 (DEBUG)	hybriddroid	completed_forced_stop	60.0	1149	25.06	4865	19414	11.48	7	61	7	3078	21	0.0001		False	False	0	0	results/gemma-local-result/Infinity_For_Reddit/hybriddroid
+Jellyfin Android	org.jellyfin.mobile.debug	0.0.0-dev.1	gptdroid	succeeded	60.0	781	33.84	1148	3392	20.0	1	5	782	641980	17285	0.0271		False	False	0	0	results/gemma-local-result/Jellyfin_Android/gptdroid
+Jellyfin Android	org.jellyfin.mobile.debug	0.0.0-dev.1	llmdroid	completed_forced_stop	60.0	715	39.13	1361	3478	20.0	1	5	63				4282	True	False	0	0	results/gemma-local-result/Jellyfin_Android/llmdroid
+Jellyfin Android	org.jellyfin.mobile.debug	0.0.0-dev.1	hybriddroid	completed_forced_stop	60.0	1072	32.37	5278	16303	20.0	1	5	3	802	9	0.0		False	False	0	0	results/gemma-local-result/Jellyfin_Android/hybriddroid
+Kiwix	org.kiwix.kiwixmobile	3.11.1	gptdroid	succeeded	60.0	756	32.28	2908	9008	16.67	1	6	757	700424	22732	0.0298		False	False	0	0	results/gemma-local-result/Kiwix/gptdroid
+Kiwix	org.kiwix.kiwixmobile	3.11.1	llmdroid	completed_forced_stop	60.0	110	32.56	3539	10869	16.67	1	6	991				234547	False	False	0	0	results/gemma-local-result/Kiwix/llmdroid
+Kiwix	org.kiwix.kiwixmobile	3.11.1	hybriddroid	completed_forced_stop	60.0	1184	45.43	7215	15882	33.33	2	6	5	1525	15	0.0001		False	False	0	0	results/gemma-local-result/Kiwix/hybriddroid
+Kore	org.xbmc.kore	v3.1.0	gptdroid	succeeded	60.0	445	15.3	227	1484	11.76	2	17	446	373585	10741	0.0158		False	False	0	1	results/gemma-local-result/Kore/gptdroid
+Kore	org.xbmc.kore	v3.1.0	llmdroid	completed_forced_stop	60.0	745	17.06	341	1999	5.88	1	17	53				5511	False	False	0	2	results/gemma-local-result/Kore/llmdroid
+Kore	org.xbmc.kore	v3.1.0	hybriddroid	completed_forced_stop	60.0	1055	10.7	2010	18782	5.88	1	17	4	1668	14	0.0001		False	False	0	1	results/gemma-local-result/Kore/hybriddroid
+LibreTorrent	org.proninyaroslav.libretorrent.debug	3.5.2-DEBUG	gptdroid	succeeded	60.0	493	27.42	4668	17025	11.11	2	18	494	715157	13027	0.0296		False	False	0	0	results/gemma-local-result/LibreTorrent/gptdroid
+LibreTorrent	org.proninyaroslav.libretorrent.debug	3.5.2-DEBUG	llmdroid	completed_forced_stop	60.0	297	34.53	776	2247	38.89	7	18	29				5985	True	False	0	0	results/gemma-local-result/LibreTorrent/llmdroid
+LibreTorrent	org.proninyaroslav.libretorrent.debug	3.5.2-DEBUG	hybriddroid	completed_forced_stop	60.0	1009	32.61	687	2107	66.67	12	18	11	4869	39	0.0002		True	False	0	0	results/gemma-local-result/LibreTorrent/hybriddroid
+MaterialFBook	me.zeeroooo.materialfb	4.0.2	gptdroid	succeeded	60.1	536	40.52	372	918	25.0	1	4	537	938796	13448	0.0386		False	False	0	1	results/gemma-local-result/MaterialFBook/gptdroid
+MaterialFBook	me.zeeroooo.materialfb	4.0.2	llmdroid	completed_forced_stop	60.0	735	40.41	371	918	25.0	1	4	100				33453	False	False	0	2	results/gemma-local-result/MaterialFBook/llmdroid
+MaterialFBook	me.zeeroooo.materialfb	4.0.2	hybriddroid	completed_forced_stop	60.0	1157	51.41	475	924	25.0	1	4	2	607	6	0.0		True	False	0	1	results/gemma-local-result/MaterialFBook/hybriddroid
+Money Manager Ex	com.money.manager.ex	2024.09.21	gptdroid	succeeded	60.0	3	26.21	3283	12526	12.2	5	41	4	2784	125	0.0001		False	False	0	1	results/gemma-local-result/Money_Manager_Ex/gptdroid
+Money Manager Ex	com.money.manager.ex	2024.09.21	llmdroid	completed_forced_stop	60.0	729	28.33	1181	4169	41.46	17	41	96				27838	True	False	0	1	results/gemma-local-result/Money_Manager_Ex/llmdroid
+Money Manager Ex	com.money.manager.ex	2024.09.21	hybriddroid	completed_forced_stop	60.0	1178	43.73	4323	9886	46.34	19	41	2	967	7	0.0		True	False	0	1	results/gemma-local-result/Money_Manager_Ex/hybriddroid
+Muzei	net.nurik.roman.muzei	3.6.2 Debug	gptdroid	succeeded	60.0	446	45.84	182	397	7.14	1	14	447	368630	10308	0.0156		False	False	0	0	results/gemma-local-result/Muzei/gptdroid
+Muzei	net.nurik.roman.muzei	3.6.2 Debug	llmdroid	completed_forced_stop	60.0	397	38.0	19	50	7.14	1	14	49				5710	False	False	0	0	results/gemma-local-result/Muzei/llmdroid
+Muzei	net.nurik.roman.muzei	3.6.2 Debug	hybriddroid	completed_forced_stop	60.0	794	45.59	181	397	7.14	1	14	0					False	False	0	0	results/gemma-local-result/Muzei/hybriddroid
+My Expenses Debug	org.totschnig.myexpenses.debug	3.9.3	gptdroid	succeeded	60.0	631	30.57	5641	18450	3.51	2	57	632	668513	15194	0.028		False	False	0	0	results/gemma-local-result/My_Expenses_Debug/gptdroid
+My Expenses Debug	org.totschnig.myexpenses.debug	3.9.3	llmdroid	completed_forced_stop	60.0	795	25.91	6207	23957	21.05	12	57	104				16695	False	False	0	0	results/gemma-local-result/My_Expenses_Debug/llmdroid
+My Expenses Debug	org.totschnig.myexpenses.debug	3.9.3	hybriddroid	completed_forced_stop	60.0	1118	42.59	20733	48679	22.81	13	57	6	2161	20	0.0001		True	False	0	1	results/gemma-local-result/My_Expenses_Debug/hybriddroid
+NewPipe Debug	org.schabi.newpipe.debug	0.27.2	gptdroid	succeeded	60.0	476	24.41	2281	9346	8.33	1	12	477	422918	12368	0.0179		False	False	0	0	results/gemma-local-result/NewPipe_Debug/gptdroid
+NewPipe Debug	org.schabi.newpipe.debug	0.27.2	llmdroid	completed_forced_stop	60.0	108	30.77	3919	12737	25.0	3	12	16				3583	False	False	0	1	results/gemma-local-result/NewPipe_Debug/llmdroid
+NewPipe Debug	org.schabi.newpipe.debug	0.27.2	hybriddroid	completed_forced_stop	60.0	996	15.46	328	2121	50.0	6	12	3	2925	11	0.0001		True	False	0	1	results/gemma-local-result/NewPipe_Debug/hybriddroid
+Nextcloud	com.nextcloud.client	3.9.0 RC1	gptdroid	succeeded	60.0	1	48.77	771	1581	8.57	3	35	2	922	78	0.0		False	False	0	1	results/gemma-local-result/Nextcloud/gptdroid
+Nextcloud	com.nextcloud.client	3.9.0 RC1	llmdroid	completed_forced_stop	60.0	237	49.07	790	1610	5.71	2	35	44				10576	False	False	0	2	results/gemma-local-result/Nextcloud/llmdroid
+Nextcloud	com.nextcloud.client	3.9.0 RC1	hybriddroid	completed_forced_stop	60.0	1091	50.43	812	1610	5.71	2	35	27	8398	99	0.0003		False	False	0	1	results/gemma-local-result/Nextcloud/hybriddroid
+ODK Collect	org.odk.collect.android	v1.23.0-beta.2-dirty	gptdroid	succeeded	60.1	746	23.3	753	3232	8.33	3	36	747	833889	17967	0.0348		False	False	0	10	results/gemma-local-result/ODK_Collect/gptdroid
+ODK Collect	org.odk.collect.android	v1.23.0-beta.2-dirty	llmdroid	completed_forced_stop	60.0	444	26.91	1123	4173	27.78	10	36	1037				290278	False	False	0	0	results/gemma-local-result/ODK_Collect/llmdroid
+ODK Collect	org.odk.collect.android	v1.23.0-beta.2-dirty	hybriddroid	completed_forced_stop	60.0	1129	32.68	2129	6514	19.44	7	36	0					False	False	0	1	results/gemma-local-result/ODK_Collect/hybriddroid
+Omni Notes Alpha	it.feio.android.omninotes.alpha	6.4.0	gptdroid	succeeded	60.1	751	26.6	817	3071	7.69	1	13	752	751993	20983	0.0318		False	False	0	0	results/gemma-local-result/Omni_Notes_Alpha/gptdroid
+Omni Notes Alpha	it.feio.android.omninotes.alpha	6.4.0	llmdroid	completed_forced_stop	60.0	794	31.08	1636	5264	38.46	5	13	81				48664	True	False	0	0	results/gemma-local-result/Omni_Notes_Alpha/llmdroid
+Omni Notes Alpha	it.feio.android.omninotes.alpha	6.4.0	hybriddroid	completed_forced_stop	60.0	1071	47.96	3368	7023	46.15	6	13	15	5206	48	0.0002		True	False	0	1	results/gemma-local-result/Omni_Notes_Alpha/hybriddroid
+Open Food Facts	org.openpetfoodfacts.scanner.debug	3.9.0	gptdroid	succeeded	60.1	665	21.1	6841	32416	8.33	2	24	666	576036	14691	0.0242		False	False	0	0	results/gemma-local-result/Open_Food_Facts/gptdroid
+Open Food Facts	org.openpetfoodfacts.scanner.debug	3.9.0	llmdroid	completed_forced_stop	60.0	328	24.38	9498	38953	45.83	11	24	55				8810	True	False	0	1	results/gemma-local-result/Open_Food_Facts/llmdroid
+Open Food Facts	org.openpetfoodfacts.scanner.debug	3.9.0	hybriddroid	completed_forced_stop	60.0	1050	30.46	13841	45444	50.0	12	24	3	793	9	0.0		True	False	0	0	results/gemma-local-result/Open_Food_Facts/hybriddroid
+OpenLauncher	com.benny.openlauncher	0.3.1	gptdroid	succeeded	60.1	521	48.94	23	47	12.5	1	8	522	416397	13784	0.0178		False	False	0	0	results/gemma-local-result/OpenLauncher/gptdroid
+OpenLauncher	com.benny.openlauncher	0.3.1	llmdroid	completed_forced_stop	60.0	721	33.14	970	2927	25.0	2	8	77				6901	False	False	0	2	results/gemma-local-result/OpenLauncher/llmdroid
+OpenLauncher	com.benny.openlauncher	0.3.1	hybriddroid	completed_forced_stop	60.0	947	58.56	2151	3673	62.5	5	8	8	2744	29	0.0001		True	False	0	2	results/gemma-local-result/OpenLauncher/hybriddroid
+Orgzly Revived	com.orgzlyrevived	1.8.27-beta.2	gptdroid	succeeded	60.1	757	25.65	6479	25259	10.0	2	20	758	868109	19550	0.0363		False	False	0	0	results/gemma-local-result/Orgzly_Revived/gptdroid
+Orgzly Revived	com.orgzlyrevived	1.8.27-beta.2	llmdroid	completed_forced_stop	60.0	149	24.45	6103	24959	10.0	2	20	993				289468	True	False	0	0	results/gemma-local-result/Orgzly_Revived/llmdroid
+Orgzly Revived	com.orgzlyrevived	1.8.27-beta.2	hybriddroid	completed_forced_stop	60.0	1051	43.6	19102	43807	10.0	2	20	3	2816	11	0.0001		True	False	0	0	results/gemma-local-result/Orgzly_Revived/hybriddroid
+ownCloud	com.owncloud.android.debug	4.4.0	gptdroid	succeeded	60.0	736	24.84	4388	17665	11.54	3	26	737	822801	20657	0.0346		False	False	0	0	results/gemma-local-result/ownCloud/gptdroid
+ownCloud	com.owncloud.android.debug	4.4.0	llmdroid	completed_forced_stop	60.0	51	24.47	4312	17620	3.85	1	26	3				365	False	False	0	0	results/gemma-local-result/ownCloud/llmdroid
+ownCloud	com.owncloud.android.debug	4.4.0	hybriddroid	completed_forced_stop	60.0	972	24.74	4370	17664	3.85	1	26	0					False	False	0	1	results/gemma-local-result/ownCloud/hybriddroid
+OwnTracks	org.owntracks.android.debug	2.5.3	gptdroid	succeeded	60.1	773	35.26	2113	5993	16.67	2	12	774	593044	17067	0.0251		False	False	0	0	results/gemma-local-result/OwnTracks/gptdroid
+OwnTracks	org.owntracks.android.debug	2.5.3	llmdroid	completed_forced_stop	60.0	693	33.8	1965	5814	8.33	1	12	75				6219	True	False	0	0	results/gemma-local-result/OwnTracks/llmdroid
+OwnTracks	org.owntracks.android.debug	2.5.3	hybriddroid	completed_forced_stop	60.0	1139	35.86	2149	5993	8.33	1	12	0					True	False	0	1	results/gemma-local-result/OwnTracks/hybriddroid
+Phonograph DEBUG	com.kabouzeid.gramophone.debug	0.15.0 BETA 1 DEBUG	gptdroid	succeeded	60.1	741	34.15	1508	4416	13.33	2	15	742	840078	17540	0.035		False	False	0	1	results/gemma-local-result/Phonograph_DEBUG/gptdroid
+Phonograph DEBUG	com.kabouzeid.gramophone.debug	0.15.0 BETA 1 DEBUG	llmdroid	completed_forced_stop	60.0	400	35.37	1878	5309	40.0	6	15	48				7743	False	False	0	1	results/gemma-local-result/Phonograph_DEBUG/llmdroid
+Phonograph DEBUG	com.kabouzeid.gramophone.debug	0.15.0 BETA 1 DEBUG	hybriddroid	completed_forced_stop	60.0	1084	47.56	3052	6417	40.0	6	15	4	1613	14	0.0001		True	False	0	1	results/gemma-local-result/Phonograph_DEBUG/hybriddroid
+RedReader	org.quantumbadger.redreader	1.24.1	gptdroid	succeeded	60.1	464	23.29	1250	5366	8.7	2	23	465	431292	13042	0.0183		False	False	0	0	results/gemma-local-result/RedReader/gptdroid
+RedReader	org.quantumbadger.redreader	1.24.1	llmdroid	completed_forced_stop	60.0	747	39.53	6312	15967	30.43	7	23	100				16262	True	False	0	1	results/gemma-local-result/RedReader/llmdroid
+RedReader	org.quantumbadger.redreader	1.24.1	hybriddroid	completed_forced_stop	60.0	563	49.29	13226	26834	43.48	10	23	0					True	False	0	1	results/gemma-local-result/RedReader/hybriddroid
+Scarlet Notes FD	com.bijoysingh.quicknote.pro	6.9.5-pro	gptdroid	succeeded	60.1	767	35.2	1981	5628	13.33	2	15	768	772447	27516	0.0331		False	False	0	0	results/gemma-local-result/Scarlet_Notes_FD/gptdroid
+Scarlet Notes FD	com.bijoysingh.quicknote.pro	6.9.5-pro	llmdroid	completed_forced_stop	60.0	790	36.34	2123	5842	26.67	4	15	79				8510	True	False	0	0	results/gemma-local-result/Scarlet_Notes_FD/llmdroid
+Scarlet Notes FD	com.bijoysingh.quicknote.pro	6.9.5-pro	hybriddroid	completed_forced_stop	60.0	1138	48.4	3929	8117	26.67	4	15	30	11338	113	0.0005		True	False	0	2	results/gemma-local-result/Scarlet_Notes_FD/hybriddroid
+Simple Alarm Clock	com.better.alarm.debug	3.16.01	gptdroid	succeeded	60.0	492	56.43	2983	5286	20.0	1	5	493	600816	14941	0.0252		False	False	0	0	results/gemma-local-result/Simple_Alarm_Clock/gptdroid
+Simple Alarm Clock	com.better.alarm.debug	3.16.01	llmdroid	completed_forced_stop	60.0	692	57.71	3595	6229	40.0	2	5	87				19530	False	False	0	0	results/gemma-local-result/Simple_Alarm_Clock/llmdroid
+Simple Alarm Clock	com.better.alarm.debug	3.16.01	hybriddroid	completed_forced_stop	60.0	1127	70.25	5140	7317	40.0	2	5	6	2537	24	0.0001		False	False	0	1	results/gemma-local-result/Simple_Alarm_Clock/hybriddroid
+SkyTube	free.rm.skytube.extra	2.999	gptdroid	succeeded	60.0	777	25.39	1581	6226	15.38	2	13	778	868286	18693	0.0362		False	False	0	0	results/gemma-local-result/SkyTube/gptdroid
+SkyTube	free.rm.skytube.extra	2.999	llmdroid	completed_forced_stop	60.0	679	21.26	1263	5940	23.08	3	13	97				16132	False	False	0	0	results/gemma-local-result/SkyTube/llmdroid
+SkyTube	free.rm.skytube.extra	2.999	hybriddroid	completed_forced_stop	60.0	1068	31.09	5517	17745	23.08	3	13	0					True	False	0	0	results/gemma-local-result/SkyTube/hybriddroid
+StreetComplete	de.westnordost.streetcomplete.debug	57.3	gptdroid	succeeded	60.1	666	34.42	9350	27164	14.29	1	7	667	834170	22150	0.0351		False	False	0	0	results/gemma-local-result/StreetComplete/gptdroid
+StreetComplete	de.westnordost.streetcomplete.debug	57.3	llmdroid	completed_forced_stop	60.0	687	33.52	9720	28996	57.14	4	7	84				16108	False	False	0	0	results/gemma-local-result/StreetComplete/llmdroid
+StreetComplete	de.westnordost.streetcomplete.debug	57.3	hybriddroid	completed_forced_stop	60.0	1012	45.22	16313	36075	57.14	4	7	2	992	7	0.0		True	False	0	0	results/gemma-local-result/StreetComplete/hybriddroid
+Sunflower	com.google.samples.apps.sunflower	0.1.6	gptdroid	succeeded	60.0	499	53.13	551	1037	100.0	1	1	500	416020	11857	0.0176		False	False	0	2	results/gemma-local-result/Sunflower/gptdroid
+Sunflower	com.google.samples.apps.sunflower	0.1.6	llmdroid	completed_forced_stop	60.0	737	60.44	897	1484	100.0	1	1	69				5617	False	False	0	1	results/gemma-local-result/Sunflower/llmdroid
+Sunflower	com.google.samples.apps.sunflower	0.1.6	hybriddroid	completed_forced_stop	60.0	1010	66.91	1019	1523	100.0	1	1	0					False	False	0	1	results/gemma-local-result/Sunflower/hybriddroid
+Trackbook	org.y20k.trackbook	2.1.2	gptdroid	succeeded	60.0	254	30.01	2138	7124	100.0	1	1	255	222358	7138	0.0095		False	False	0	0	results/gemma-local-result/Trackbook/gptdroid
+Trackbook	org.y20k.trackbook	2.1.2	llmdroid	completed_forced_stop	60.0	676	33.39	2562	7674	100.0	1	1	69				9591	False	False	0	0	results/gemma-local-result/Trackbook/llmdroid
+Trackbook	org.y20k.trackbook	2.1.2	hybriddroid	completed_forced_stop	60.0	1043	38.4	2976	7750	100.0	1	1	1	382	4	0.0		False	False	0	0	results/gemma-local-result/Trackbook/hybriddroid
+Transistor	org.y20k.transistor	4.1.1	gptdroid	succeeded	60.1	744	27.33	1087	3978	50.0	1	2	745	709654	22433	0.0302		False	False	0	0	results/gemma-local-result/Transistor/gptdroid
+Transistor	org.y20k.transistor	4.1.1	llmdroid	completed_forced_stop	60.0	50	23.42	907	3873	50.0	1	2	8				2104	False	False	0	0	results/gemma-local-result/Transistor/llmdroid
+Transistor	org.y20k.transistor	4.1.1	hybriddroid	completed_forced_stop	60.0	1070	30.25	1340	4430	50.0	1	2	7	1898	22	0.0001		False	False	0	0	results/gemma-local-result/Transistor/hybriddroid
+Twire	com.perflyst.twire.debug	2.11.0-DEBUG	gptdroid	succeeded	60.0	487	38.23	510	1334	15.0	3	20	488	671482	11870	0.0278		False	False	0	0	results/gemma-local-result/Twire/gptdroid
+Twire	com.perflyst.twire.debug	2.11.0-DEBUG	llmdroid	completed_forced_stop	60.0	618	27.02	17876	66151	30.0	6	20	93				20759	False	False	1	0	results/gemma-local-result/Twire/llmdroid
+Twire	com.perflyst.twire.debug	2.11.0-DEBUG	hybriddroid	completed_forced_stop	60.0	988	49.41	1978	4003	65.0	13	20	3	1159	10	0.0		False	False	0	0	results/gemma-local-result/Twire/hybriddroid
+Ultrasonic	org.moire.ultrasonic.debug	3.2.0	gptdroid	succeeded	60.0	744	36.28	3027	8344	33.33	1	3	745	1108005	18757	0.0458		False	False	0	0	results/gemma-local-result/Ultrasonic/gptdroid
+Ultrasonic	org.moire.ultrasonic.debug	3.2.0	llmdroid	completed_forced_stop	60.0	730	35.52	2626	7394	33.33	1	3	76				16667	False	False	0	0	results/gemma-local-result/Ultrasonic/llmdroid
+Ultrasonic	org.moire.ultrasonic.debug	3.2.0	hybriddroid	completed_forced_stop	60.0	1038	33.04	2632	7966	33.33	1	3	4	1384	14	0.0001		True	False	0	0	results/gemma-local-result/Ultrasonic/hybriddroid
+Vespucci	de.blau.android	11.0.0.8	gptdroid	succeeded	60.1	771	23.42	4065	17355	10.53	2	19	772	592919	18587	0.0252		False	False	0	2	results/gemma-local-result/Vespucci/gptdroid
+Vespucci	de.blau.android	11.0.0.8	llmdroid	completed_forced_stop	60.0	105	27.05	4982	18420	26.32	5	19	24				6820	True	False	0	2	results/gemma-local-result/Vespucci/llmdroid
+Vespucci	de.blau.android	11.0.0.8	hybriddroid	completed_forced_stop	60.0	1074	31.16	6678	21428	52.63	10	19	3	845	9	0.0		True	True	0	2	results/gemma-local-result/Vespucci/hybriddroid
+Vinyl Music Player	com.poupa.vinylmusicplayer.ci.debug	1.11.0-HEAD_d8aeb8c_260816-1554 CI DEBUG	gptdroid	succeeded	60.1	535	31.1	2716	8734	10.53	2	19	536	1403930	15024	0.0574		False	False	0	0	results/gemma-local-result/Vinyl_Music_Player/gptdroid
+Vinyl Music Player	com.poupa.vinylmusicplayer.ci.debug	1.11.0-HEAD_d8aeb8c_260816-1554 CI DEBUG	llmdroid	completed_forced_stop	60.0	567	26.65	2267	8507	36.84	7	19	80				13005	True	True	0	0	results/gemma-local-result/Vinyl_Music_Player/llmdroid
+Vinyl Music Player	com.poupa.vinylmusicplayer.ci.debug	1.11.0-HEAD_d8aeb8c_260816-1554 CI DEBUG	hybriddroid	completed_forced_stop	60.0	997	30.63	2289	7473	31.58	6	19	3	1219	10	0.0		True	True	0	0	results/gemma-local-result/Vinyl_Music_Player/hybriddroid
+Wallabag	fr.gaulupeau.apps.InThePoche.debug	2.5.3-DEBUG	gptdroid	succeeded	60.1	784	19.95	905	4537	30.0	3	10	785	709944	18866	0.0299		False	False	0	0	results/gemma-local-result/Wallabag/gptdroid
+Wallabag	fr.gaulupeau.apps.InThePoche.debug	2.5.3-DEBUG	llmdroid	completed_forced_stop	60.0	486	20.81	956	4594	60.0	6	10	72				10478	False	False	0	0	results/gemma-local-result/Wallabag/llmdroid
+Wallabag	fr.gaulupeau.apps.InThePoche.debug	2.5.3-DEBUG	hybriddroid	completed_forced_stop	60.0	1135	28.25	1881	6658	30.0	3	10	0					True	False	0	0	results/gemma-local-result/Wallabag/hybriddroid
+Wikipedia Alpha	org.wikipedia.alpha	2.7.50507-alpha-2024-10-25	gptdroid	succeeded	60.0	634	29.92	5057	16901	6.9	4	58	635	1181469	16826	0.0486		False	False	0	0	results/gemma-local-result/Wikipedia_Alpha/gptdroid
+Wikipedia Alpha	org.wikipedia.alpha	2.7.50507-alpha-2024-10-25	llmdroid	completed_forced_stop	60.0	344	39.08	8647	22125	18.97	11	58	88				25843	False	False	0	0	results/gemma-local-result/Wikipedia_Alpha/llmdroid
+Wikipedia Alpha	org.wikipedia.alpha	2.7.50507-alpha-2024-10-25	hybriddroid	completed_forced_stop	60.0	1086	41.39	22864	55241	20.69	12	58	19	7362	64	0.0003		False	False	0	1	results/gemma-local-result/Wikipedia_Alpha/hybriddroid
+WordPress	org.wordpress.android	9.2	gptdroid	succeeded	60.0	753	34.33	2665	7762	4.41	3	68	754	887024	19315	0.037		False	False	0	1	results/gemma-local-result/WordPress/gptdroid
+WordPress	org.wordpress.android	9.2	llmdroid	completed_forced_stop	60.0	766	34.14	2630	7704	5.88	4	68	52				6976	True	False	0	1	results/gemma-local-result/WordPress/llmdroid
+WordPress	org.wordpress.android	9.2	hybriddroid	completed_forced_stop	60.0	1108	37.27	2682	7196	5.88	4	68	4	2303	13	0.0001		True	False	0	4	results/gemma-local-result/WordPress/hybriddroid

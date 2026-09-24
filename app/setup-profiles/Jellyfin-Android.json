@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "package": "org.jellyfin.mobile.debug",
+  "profile": "connect-to-self-hosted-server",
+  "persona": "disposable-staging-user",
+  "timeout_seconds": 240.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-connect-screen",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 60.0,
+          "parameters": {
+            "selector": {
+              "package": "org.jellyfin.mobile.debug",
+              "class_name": "android.widget.EditText"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "focus-host-field",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.jellyfin.mobile.debug",
+          "class_name": "android.widget.EditText"
+        }
+      }
+    },
+    {
+      "id": "enter-server-address",
+      "kind": "input_text",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": true,
+        "value": "http://172.31.47.44:8096",
+        "selector": {
+          "package": "org.jellyfin.mobile.debug",
+          "class_name": "android.widget.EditText"
+        }
+      }
+    },
+    {
+      "id": "press-connect",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.jellyfin.mobile.debug",
+          "text": "Connect"
+        }
+      }
+    },
+    {
+      "id": "wait-for-client",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_absent",
+          "timeout_seconds": 90.0,
+          "parameters": {
+            "selector": {
+              "package": "org.jellyfin.mobile.debug",
+              "text": "Connect to Server"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "success_predicates": [
+    {
+      "kind": "package_foreground",
+      "timeout_seconds": 30.0,
+      "parameters": {
+        "package": "org.jellyfin.mobile.debug"
+      }
+    },
+    {
+      "kind": "node_absent",
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.jellyfin.mobile.debug",
+          "text": "Connect to Server"
+        }
+      }
+    }
+  ]
+}

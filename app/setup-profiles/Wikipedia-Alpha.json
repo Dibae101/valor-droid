@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "profile": "explore-shell-after-onboarding-and-announcement",
+  "persona": "anonymous-encyclopedia-reader",
+  "package": "org.wikipedia.alpha",
+  "timeout_seconds": 300.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-onboarding-skip",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/fragment_onboarding_skip_button", "text": "Skip"}}}}
+    },
+    {
+      "id": "skip-onboarding",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/fragment_onboarding_skip_button", "text": "Skip"}}
+    },
+    {
+      "id": "wait-for-explore-announcement",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 90.0, "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/view_announcement_action_negative", "text": "Got it"}}}}
+    },
+    {
+      "id": "dismiss-explore-announcement",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/view_announcement_action_negative", "text": "Got it"}}
+    },
+    {
+      "id": "restart-after-onboarding",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-explore-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 90.0, "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/nav_tab_explore", "content_description": "Explore"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "org.wikipedia.alpha"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "org.wikipedia.alpha/org.wikipedia.main.MainActivity"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/nav_tab_explore", "content_description": "Explore"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/fragment_onboarding_skip_button", "text": "Skip"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "org.wikipedia.alpha", "resource_id": "org.wikipedia.alpha:id/view_announcement_action_negative", "text": "Got it"}}}
+  ]
+}

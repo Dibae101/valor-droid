@@ -1,0 +1,89 @@
+%%{init: {'flowchart': {'wrappingWidth': 390, 'nodeSpacing': 34, 'rankSpacing': 44}}}%%
+flowchart TB
+
+subgraph P["PREPARE — pinned external producer, verified internally"]
+  EXT["EXTERNAL ARTIFACT REQUIRED<br/>transformer + static enumerator"] --> PIN["Exact source commit · executable/tool SHA-256<br/>no-shell argv · bounded timeout"]
+  PIN --> RECEIPT["One invocation: instrumented APK + unit IDs<br/>exact completeness/one-probe receipt"]
+  RECEIPT --> PROOF["Generate schema-2 proof<br/>bind source + aggregate toolchain digest"]
+  MANUAL["Alternative audited manual inputs<br/>original + instrumented + units + proof"] --> IMPORT
+  PROOF --> IMPORT["copy first · hash both APKs<br/>AAPT both identities + instrumented launchers"]
+  IMPORT --> BUNDLE["Immutable prepared.json + universe.json<br/>equal endpoints · both hashes · bundle SHA-256"]
+end
+
+subgraph F["FLEET — immutable assignment and safe reDroid ownership"]
+  FCFG["Exact fleet schema 1<br/>attach or manage · jobs + desired slots"] --> PLAN["sorted-round-robin-v1 campaign-plan.json<br/>verify inputs · derive serial configs · checksum"]
+  PLAN --> PROVIDER["Attach: check only<br/>Manage: pinned image · loopback port · limits"]
+  PROVIDER --> OWN["Fresh per-attempt data + container<br/>exact ownership labels · device/image identity"]
+  OWN --> CHILD["Bounded per-slot queue<br/>unchanged run-android process group"]
+  CANCEL["Timeout/interruption<br/>SIGINT → SIGTERM → SIGKILL"] --> CHILD
+  CHILD --> CEVENT["campaign-events.jsonl<br/>attempt · signal · retry · quarantine · job terminal"]
+  CEVENT --> CMAN["Event-derived immutable campaign.json<br/>recover only after terminal event"]
+  CMAN --> CVALID["Recheck plan/events/jobs/runs/serials<br/>group only equal prepared + universe"]
+end
+
+subgraph D["DEVICE SESSION — implemented, explicit ownership"]
+  SERIAL["Assigned serial + host device lock<br/>every runtime command uses adb -s"] --> INSTALL["Re-hash runtime APK · fresh install<br/>explicit/unique launcher · foreground check"]
+  INSTALL --> OBS["Activity + UIAutomator + optional screenshot<br/>stable selectors and candidate IDs"]
+  OBS --> FRONTIER["Deterministic soft frontier<br/>untried · productive · bounded/cooldown retry"]
+  FRONTIER --> RESOLVE["Re-observe expected state<br/>resolve exactly one target"]
+  RESOLVE --> EXEC["first-command dispatch timestamp<br/>executed / not_executed / failed"]
+  EXEC --> OUTCOME["Post-observation typed outcome<br/>input acceptance bound to selected field"] --> OBS
+  RECOVERY["Exact configured route/action<br/>Back · deep link · intent · forced · reset"] --> EXEC
+end
+
+subgraph M["MEASURE — continuous and fail closed"]
+  LOGCAT["adb logcat -v epoch before launch<br/>configured tag + METHOD= prefix"] --> PID["Bracket receipt with same process generation<br/>name · PID · boot ID · start token"]
+  PID --> EVENT["coverage_events.jsonl first<br/>success/failure · IDs · host/device times · ownership"]
+  EVENT --> UNION["Exact cumulative transition<br/>frozen universe · unknown ID aborts"]
+  UNION --> ASSOC["One post-dispatch action-window association<br/>or conservative unattributed"]
+  DRAIN["Drain + final PID confirmation<br/>synchronized terminal health event"] --> EVENT
+end
+
+subgraph W["RUN COMMIT + RECOVER — canonical authority"]
+  BUILD["Complete action/background transaction<br/>one prior successful collector event"] --> WAL["transactions.jsonl<br/><b>append + fsync commit point</b>"]
+  WAL --> COV["coverage.jsonl projection"]
+  WAL --> ATTR["associations.jsonl projection"]
+  WAL --> ACTIONS["actions.jsonl projection"]
+  WAL --> FSTATE["frontier.json WAL marker"]
+  RECON["Restart: exact prefixes only<br/>repair missing suffix · reject conflict/orphan"]
+  WAL --> RECON
+  RECON --> COV
+  RECON --> ATTR
+  RECON --> ACTIONS
+  RECON --> FSTATE
+end
+
+subgraph V["RUN LIFECYCLE + VALIDATION + REPORT"]
+  LIFE["lifecycle.jsonl<br/>setup/session · recovery · cleanup · terminal intent"]
+  OTHER["authorized routes · empty model_calls<br/>PID/tag/time-scoped package crashes"]
+  TERMINAL["run.json immutable status<br/>finished or non-reportable aborted<br/>recoverable count + head for every ledger"]
+  CHECK["Recompute bundle/universe/session/events,<br/>PID intervals, routes/actions, projections,<br/>totals, abort fields, terminal heads"]
+  REPORT["summary only for valid finished evidence<br/>primary · all-route · observed separate<br/><b>no demonstrated coverage increase</b>"]
+  LIFE --> CHECK
+  OTHER --> CHECK
+  TERMINAL --> CHECK
+  CHECK --> REPORT
+end
+
+BUNDLE ==>|"read-only bundle checksum + universe"| PLAN
+PLAN ==>|"prepared + exact assigned configs"| CHILD
+CHILD ==>|"one explicit child"| SERIAL
+INSTALL --> LOGCAT
+OUTCOME -.->|"app may emit method events"| LOGCAT
+EVENT --> BUILD
+RESOLVE --> BUILD
+EXEC --> BUILD
+OUTCOME --> BUILD
+ASSOC --> BUILD
+ASSOC --> FRONTIER
+ASSOC --> RECOVERY
+WAL --> CHECK
+COV --> CHECK
+ATTR --> CHECK
+ACTIONS --> CHECK
+FSTATE --> CHECK
+EXEC -.-> OTHER
+RECOVERY -.-> OTHER
+DRAIN --> LIFE
+CHECK ==>|"validated run status + manifest hash"| CEVENT
+REPORT -.->|"finished run summary only"| CVALID

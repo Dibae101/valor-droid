@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "profile": "anonymous-shell-with-connection-modal-dismissed",
+  "persona": "anonymous-test-user",
+  "package": "fr.gaulupeau.apps.InThePoche.debug",
+  "timeout_seconds": 300.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-connection-wizard-skip",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "fr.gaulupeau.apps.InThePoche.debug:id/prev_button", "text": "SKIP"}}}}
+    },
+    {
+      "id": "skip-connection-wizard",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "fr.gaulupeau.apps.InThePoche.debug:id/prev_button", "text": "SKIP"}}
+    },
+    {
+      "id": "wait-for-initial-connection-test",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "android:id/button2", "text": "NOT NOW"}}}}
+    },
+    {
+      "id": "dismiss-initial-connection-test",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "android:id/button2", "text": "NOT NOW"}}
+    },
+    {
+      "id": "restart-after-native-skip",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-recurrent-connection-test",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "android:id/button2", "text": "NOT NOW"}}}}
+    },
+    {
+      "id": "dismiss-recurrent-connection-test",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "android:id/button2", "text": "NOT NOW"}}
+    },
+    {
+      "id": "wait-for-main-search-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "fr.gaulupeau.apps.InThePoche.debug:id/menu_main_search", "content_description": "Search"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "fr.gaulupeau.apps.InThePoche.debug"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "fr.gaulupeau.apps.InThePoche.debug/fr.gaulupeau.apps.Poche.ui.MainActivity"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "fr.gaulupeau.apps.InThePoche.debug:id/menu_main_search", "content_description": "Search"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "fr.gaulupeau.apps.InThePoche.debug:id/prev_button", "text": "SKIP"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "fr.gaulupeau.apps.InThePoche.debug", "resource_id": "android:id/button2", "text": "NOT NOW"}}}
+  ]
+}

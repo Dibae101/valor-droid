@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "profile": "launcher-home-after-introduction-skip",
+  "persona": "local-launcher-test-user",
+  "package": "com.benny.openlauncher",
+  "timeout_seconds": 240.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-introduction-skip",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.benny.openlauncher", "resource_id": "com.benny.openlauncher:id/btn_skip", "text": "SKIP"}}}}
+    },
+    {
+      "id": "skip-introduction",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "com.benny.openlauncher", "resource_id": "com.benny.openlauncher:id/btn_skip", "text": "SKIP"}}
+    },
+    {
+      "id": "restart-after-introduction",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-desktop-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "com.benny.openlauncher", "resource_id": "com.benny.openlauncher:id/desktop"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "com.benny.openlauncher"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "com.benny.openlauncher/.activity.Home"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "com.benny.openlauncher", "resource_id": "com.benny.openlauncher:id/desktop"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "com.benny.openlauncher", "resource_id": "com.benny.openlauncher:id/btn_skip", "text": "SKIP"}}}
+  ]
+}

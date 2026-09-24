@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "campaign_id": "example-redroid-2",
+  "mode": "manage",
+  "max_parallel": 2,
+  "adb_executable": "adb",
+  "docker_executable": "docker",
+  "aapt_executable": "aapt",
+  "image": "redroid/redroid:14.0.0_64only@sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "owner_label": "example-redroid-2",
+  "lease_root": "/var/lib/valordroid/leases",
+  "readiness_timeout_seconds": 180.0,
+  "poll_interval_seconds": 2.0,
+  "command_timeout_seconds": 30.0,
+  "attempt_timeout_seconds": 1800.0,
+  "interrupt_grace_seconds": 20.0,
+  "terminate_grace_seconds": 10.0,
+  "kill_grace_seconds": 5.0,
+  "remove_owned_containers": true,
+  "reclaim_abandoned_containers": false,
+  "devices": [
+    {
+      "device_id": "slot-a",
+      "serial": "127.0.0.1:5555",
+      "container_name": "valordroid-redroid-a",
+      "data_root": "/var/lib/valordroid/redroid-slot-a",
+      "cpus": 2.0,
+      "memory": "4g",
+      "androidboot_args": [
+        "androidboot.redroid_dpi=320",
+        "androidboot.redroid_height=1280",
+        "androidboot.redroid_width=720"
+      ],
+      "expected_properties": {
+        "ro.build.version.release": "14",
+        "ro.build.version.sdk": "34"
+      }
+    },
+    {
+      "device_id": "slot-b",
+      "serial": "127.0.0.1:5557",
+      "container_name": "valordroid-redroid-b",
+      "data_root": "/var/lib/valordroid/redroid-slot-b",
+      "cpus": 2.0,
+      "memory": "4g",
+      "androidboot_args": [
+        "androidboot.redroid_dpi=320",
+        "androidboot.redroid_height=1280",
+        "androidboot.redroid_width=720"
+      ],
+      "expected_properties": {
+        "ro.build.version.release": "14",
+        "ro.build.version.sdk": "34"
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "example-r1",
+      "run_id": "example-r1",
+      "prepared": "../prepared/example",
+      "runtime_config": "runner-config.example.json",
+      "core_config": "config.example.json",
+      "max_attempts": 1
+    },
+    {
+      "job_id": "example-r2",
+      "run_id": "example-r2",
+      "prepared": "../prepared/example",
+      "runtime_config": "runner-config.example.json",
+      "core_config": "config.example.json",
+      "max_attempts": 1
+    }
+  ]
+}

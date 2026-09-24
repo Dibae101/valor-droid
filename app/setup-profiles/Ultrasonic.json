@@ -1,0 +1,470 @@
+{
+  "schema": 1,
+  "profile": "pinned-local-navidrome-album-after-restart",
+  "persona": "disposable-local-fixture-user",
+  "package": "org.moire.ultrasonic.debug",
+  "timeout_seconds": 600.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {
+    "login-name": "VALORDROID_ULTRASONIC_USER",
+    "login-password": "VALORDROID_ULTRASONIC_PASSWORD"
+  },
+  "steps": [
+    {
+      "id": "wait-for-welcome-settings-choice",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 60.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "android:id/button2",
+              "text": "TAKE ME TO THE SETTINGS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "open-configured-servers",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "android:id/button2",
+          "text": "TAKE ME TO THE SETTINGS"
+        }
+      }
+    },
+    {
+      "id": "wait-for-add-server",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 30.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/server_add_fab",
+              "content_description": "Add server"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "add-local-server",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/server_add_fab",
+          "content_description": "Add server"
+        }
+      }
+    },
+    {
+      "id": "wait-for-server-editor",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 60.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "class_name": "android.widget.EditText",
+              "text": "Name"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "enter-server-name",
+      "kind": "input_text",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": true,
+        "value": "VALOR-Navidrome",
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "class_name": "android.widget.EditText",
+          "text": "Name"
+        }
+      }
+    },
+    {
+      "id": "enter-server-address-suffix",
+      "kind": "input_text",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": false,
+        "value": "172.17.0.1:4533",
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "class_name": "android.widget.EditText",
+          "text": "http://"
+        }
+      }
+    },
+    {
+      "id": "enter-local-username",
+      "kind": "input_secret",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": true,
+        "secret_slot": "login-name",
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "class_name": "android.widget.EditText",
+          "text": "Username"
+        }
+      }
+    },
+    {
+      "id": "enter-local-password",
+      "kind": "input_secret",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "clear": true,
+        "secret_slot": "login-password",
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "class_name": "android.widget.EditText",
+          "text": "Password",
+          "password": true
+        }
+      }
+    },
+    {
+      "id": "reveal-save-control",
+      "kind": "scroll_until",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {
+        "container_selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "class_name": "android.widget.ScrollView"
+        },
+        "target_selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/edit_save",
+          "text": "SAVE"
+        },
+        "direction": "forward",
+        "duration_ms": 500,
+        "max_swipes": 4
+      }
+    },
+    {
+      "id": "save-local-server",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/edit_save",
+          "text": "SAVE"
+        }
+      }
+    },
+    {
+      "id": "allow-server-validation",
+      "kind": "wait",
+      "required": true,
+      "timeout_seconds": 10.0,
+      "parameters": {"seconds": 5.0}
+    },
+    {
+      "id": "wait-for-saved-local-server",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 30.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/server_name",
+              "text": "VALOR-Navidrome"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "select-saved-local-server",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/server_name",
+          "text": "VALOR-Navidrome"
+        }
+      }
+    },
+    {
+      "id": "allow-server-selection",
+      "kind": "wait",
+      "required": true,
+      "timeout_seconds": 15.0,
+      "parameters": {"seconds": 10.0}
+    },
+    {
+      "id": "wait-for-albums-entry",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 90.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/main_albums_button",
+              "text": "Albums"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "open-local-albums",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/main_albums_button",
+          "text": "Albums"
+        }
+      }
+    },
+    {
+      "id": "wait-for-local-album-before-restart",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 120.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 120.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/album_title",
+              "text": "VALOR Navidrome Fixture Album"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "restart-after-local-album",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-albums-entry-after-restart",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 90.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/main_albums_button",
+              "text": "Albums"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "reopen-local-albums-after-restart",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/main_albums_button",
+          "text": "Albums"
+        }
+      }
+    },
+    {
+      "id": "wait-for-local-album-after-restart",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 120.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 120.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/album_title",
+              "text": "VALOR Navidrome Fixture Album"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "open-local-album-after-restart",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/album_title",
+          "text": "VALOR Navidrome Fixture Album"
+        }
+      }
+    },
+    {
+      "id": "wait-for-local-track-after-restart",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 60.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/song_title",
+              "text": "VALOR Navidrome Fixture Track"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "open-local-track-actions",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/song_title",
+          "text": "VALOR Navidrome Fixture Track"
+        }
+      }
+    },
+    {
+      "id": "start-local-track-playback",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 20.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/select_album_play_now",
+          "content_description": "Play Now"
+        }
+      }
+    },
+    {
+      "id": "wait-for-named-current-playing-track",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "predicate": {
+          "kind": "node_present",
+          "timeout_seconds": 60.0,
+          "parameters": {
+            "selector": {
+              "package": "org.moire.ultrasonic.debug",
+              "resource_id": "org.moire.ultrasonic.debug:id/current_playing_song",
+              "text": "VALOR Navidrome Fixture Track"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "success_predicates": [
+    {
+      "kind": "package_foreground",
+      "timeout_seconds": 30.0,
+      "parameters": {"package": "org.moire.ultrasonic.debug"}
+    },
+    {
+      "kind": "activity_resumed",
+      "timeout_seconds": 30.0,
+      "parameters": {
+        "component": "org.moire.ultrasonic.debug/org.moire.ultrasonic.activity.NavigationActivity"
+      }
+    },
+    {
+      "kind": "node_present",
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/current_playing_song",
+          "text": "VALOR Navidrome Fixture Track"
+        }
+      }
+    },
+    {
+      "kind": "node_present",
+      "timeout_seconds": 60.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "org.moire.ultrasonic.debug:id/current_playing_album",
+          "text": "VALOR Navidrome Fixture Album"
+        }
+      }
+    },
+    {
+      "kind": "node_absent",
+      "timeout_seconds": 10.0,
+      "parameters": {
+        "selector": {
+          "package": "org.moire.ultrasonic.debug",
+          "resource_id": "android:id/button2",
+          "text": "TAKE ME TO THE SETTINGS"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "allowed_foreign_packages": [
+    "com.android.chrome",
+    "com.android.permissioncontroller"
+  ],
+  "package": "org.example.app",
+  "persona": "disposable-staging-user",
+  "profile": "oauth-login-and-restart",
+  "schema": 1,
+  "secret_environment": {
+    "login-name": "VALORDROID_EXAMPLE_LOGIN",
+    "login-password": "VALORDROID_EXAMPLE_PASSWORD"
+  },
+  "steps": [
+    {
+      "id": "open-login",
+      "kind": "tap",
+      "parameters": {
+        "selector": {
+          "package": "org.example.app",
+          "resource_id": "org.example.app:id/sign_in"
+        }
+      },
+      "required": true,
+      "timeout_seconds": 20.0
+    },
+    {
+      "id": "wait-for-provider",
+      "kind": "wait_for",
+      "parameters": {
+        "predicate": {
+          "kind": "package_foreground",
+          "parameters": {
+            "package": "com.android.chrome"
+          },
+          "timeout_seconds": 30.0
+        }
+      },
+      "required": true,
+      "timeout_seconds": 30.0
+    },
+    {
+      "id": "enter-login",
+      "kind": "input_secret",
+      "parameters": {
+        "clear": true,
+        "secret_slot": "login-name",
+        "selector": {
+          "class_name": "android.widget.EditText",
+          "package": "com.android.chrome",
+          "resource_id": "username"
+        }
+      },
+      "required": true,
+      "timeout_seconds": 20.0
+    },
+    {
+      "id": "enter-password",
+      "kind": "input_secret",
+      "parameters": {
+        "clear": true,
+        "secret_slot": "login-password",
+        "selector": {
+          "class_name": "android.widget.EditText",
+          "package": "com.android.chrome",
+          "password": true
+        }
+      },
+      "required": true,
+      "timeout_seconds": 20.0
+    },
+    {
+      "id": "submit-login",
+      "kind": "tap",
+      "parameters": {
+        "selector": {
+          "package": "com.android.chrome",
+          "text": "Sign in"
+        }
+      },
+      "required": true,
+      "timeout_seconds": 20.0
+    },
+    {
+      "id": "wait-for-callback",
+      "kind": "wait_for",
+      "parameters": {
+        "predicate": {
+          "kind": "package_foreground",
+          "parameters": {
+            "package": "org.example.app"
+          },
+          "timeout_seconds": 60.0
+        }
+      },
+      "required": true,
+      "timeout_seconds": 60.0
+    },
+    {
+      "id": "prove-state-survives-restart",
+      "kind": "restart_preserving_state",
+      "parameters": {},
+      "required": true,
+      "timeout_seconds": 30.0
+    }
+  ],
+  "success_predicates": [
+    {
+      "kind": "package_foreground",
+      "parameters": {
+        "package": "org.example.app"
+      },
+      "timeout_seconds": 20.0
+    },
+    {
+      "kind": "node_absent",
+      "parameters": {
+        "selector": {
+          "package": "org.example.app",
+          "resource_id": "org.example.app:id/sign_in"
+        }
+      },
+      "timeout_seconds": 10.0
+    }
+  ],
+  "timeout_seconds": 240.0
+}

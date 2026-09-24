@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "profile": "library-shell-after-onboarding",
+  "persona": "offline-reader-test-user",
+  "package": "org.kiwix.kiwixmobile",
+  "timeout_seconds": 240.0,
+  "allowed_foreign_packages": [],
+  "secret_environment": {},
+  "steps": [
+    {
+      "id": "wait-for-get-started",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.kiwix.kiwixmobile", "resource_id": "org.kiwix.kiwixmobile:id/get_started", "text": "GET STARTED"}}}}
+    },
+    {
+      "id": "get-started",
+      "kind": "tap",
+      "required": true,
+      "timeout_seconds": 30.0,
+      "parameters": {"selector": {"package": "org.kiwix.kiwixmobile", "resource_id": "org.kiwix.kiwixmobile:id/get_started", "text": "GET STARTED"}}
+    },
+    {
+      "id": "restart-after-onboarding",
+      "kind": "restart_preserving_state",
+      "required": true,
+      "timeout_seconds": 90.0,
+      "parameters": {}
+    },
+    {
+      "id": "wait-for-open-library-witness",
+      "kind": "wait_for",
+      "required": true,
+      "timeout_seconds": 60.0,
+      "parameters": {"predicate": {"kind": "node_present", "timeout_seconds": 60.0, "parameters": {"selector": {"package": "org.kiwix.kiwixmobile", "resource_id": "org.kiwix.kiwixmobile:id/go_to_library_button_no_open_book", "text": "OPEN LIBRARY"}}}}
+    }
+  ],
+  "success_predicates": [
+    {"kind": "package_foreground", "timeout_seconds": 30.0, "parameters": {"package": "org.kiwix.kiwixmobile"}},
+    {"kind": "activity_resumed", "timeout_seconds": 30.0, "parameters": {"component": "org.kiwix.kiwixmobile/.main.KiwixMainActivity"}},
+    {"kind": "node_present", "timeout_seconds": 30.0, "parameters": {"selector": {"package": "org.kiwix.kiwixmobile", "resource_id": "org.kiwix.kiwixmobile:id/go_to_library_button_no_open_book", "text": "OPEN LIBRARY"}}},
+    {"kind": "node_absent", "timeout_seconds": 10.0, "parameters": {"selector": {"package": "org.kiwix.kiwixmobile", "resource_id": "org.kiwix.kiwixmobile:id/get_started", "text": "GET STARTED"}}}
+  ]
+}

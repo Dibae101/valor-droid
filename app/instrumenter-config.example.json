@@ -1,0 +1,36 @@
+{
+  "schema_version": 3,
+  "protocol": "valordroid-instrumenter-v1",
+  "producer": "androlog",
+  "producer_version": "REPLACE_WITH_EXACT_VERSION",
+  "source_revision": "0000000000000000000000000000000000000000",
+  "command": [
+    "java",
+    "-Xmx8g",
+    "-jar",
+    "{tool:androlog-transformer}"
+  ],
+  "executable_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "toolchain": [
+    {
+      "name": "androlog-transformer",
+      "path": "tools/androlog-transformer.jar",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "soot-dependencies",
+      "path": "tools/soot-dependencies.jar",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "timeout_seconds": 1800.0,
+  "backend": "androlog-logcat-method-v1",
+  "backend_version": "REPLACE_WITH_EXACT_BACKEND_VERSION",
+  "inclusion_policy": "REPLACE_WITH_EXACT_STATIC_METHOD_POLICY",
+  "log_tag": "AndroLog",
+  "method_prefix": "METHOD=",
+  "environment": {
+    "JAVA_HOME": "/usr/lib/jvm/REPLACE_WITH_EXACT_JDK",
+    "PATH": "/usr/lib/jvm/REPLACE_WITH_EXACT_JDK/bin:/usr/bin:/bin"
+  }
+}

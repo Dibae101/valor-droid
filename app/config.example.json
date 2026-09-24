@@ -1,0 +1,12 @@
+{
+  "allow_forced_routes": false,
+  "association_settle_seconds": 2.0,
+  "initial_no_yield_attempts": 2,
+  "max_zero_gain_candidate_attempts": 3,
+  "max_llm_candidates": 20,
+  "max_synthesized_deep_links": 4,
+  "productive_yield_floor": 0.05,
+  "retry_cooldown_seconds": 60.0,
+  "stall_actions": 40,
+  "stall_seconds": 90.0
+}
